@@ -17,12 +17,13 @@
 
         > aside {
             display: none;
-            > h2 {
-                margin-top: 0.6rem;
+            > h1 {
+                margin-top: 0.67rem;
             }
             > ul {
                 list-style-type: none;
                 padding-left: 0;
+                margin-left: 1rem;
 
                 > li {
                     border-left: 1px solid var(--accents-4);

@@ -6,13 +6,13 @@
   <div>
     {% set intro_page = get_page(path="developers/introduction.md") %}
     <aside>
-      <h2>Getting Started</h2>
+      <h1>Getting Started</h1>
       <ul>
         {% for page in section.pages %}
         <li><a href="{{ page.path | safe }}">{{ page.title }}</a></li>
         {% endfor %}
       </ul>
-      <h2>Reference</h2>
+      <h1>Reference</h1>
       <ul>
         {% set reference_section = get_section(path="reference/_index.md") %}
         {% for page in reference_section.pages %}
