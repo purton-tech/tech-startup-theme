@@ -17,3 +17,5 @@ alias nrs='npm run start'
 
 # Database
 alias db='psql $DATABASE_URL'
+
+alias zs='zola serve --interface 0.0.0.0'
