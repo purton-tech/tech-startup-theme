@@ -15,3 +15,5 @@ highlight_code = true
 
 [extra]
 app_base_url = "https://app.cloak.software"
+support_email = "support@tech-startup.com"
+company_address = "71-75 Shelton Street, London, LND, WC2H 9JQ, United Kingdom"
