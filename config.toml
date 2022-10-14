@@ -17,3 +17,20 @@ highlight_code = true
 app_base_url = "https://app.cloak.software"
 support_email = "support@tech-startup.com"
 company_address = "71-75 Shelton Street, London, LND, WC2H 9JQ, United Kingdom"
+github_repo = "https://github.com/purton-tech/tech-startup-theme"
+twitter = "https://twitter.com/ianpurton"
+linkedin = "https://www.linkedin.com/in/ianpurton/"
+start_year = "2021"
+
+# Resources on the footer (LHS)
+resources_1 = [
+    {name = "Blog", url = "/blog"},
+    {name = "Documentation", url = "/developers"},
+    {name = "FAQ", url = "/blog"},
+]
+
+resources_2 = [
+    {name = "Pricing", url = "/pricing"},
+    {name = "Mission", url = "/blog"},
+    {name = "Careers", url = "/blog"},
+]

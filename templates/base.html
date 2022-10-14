@@ -67,20 +67,21 @@
         <div class="link-block">
           <h4>Resources</h4>
           <ul>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/developers/">Documentation</a></li>
-            <li><a href="/blog">FAQ</a></li>
-            <li><a href="/blog">Status</a></li>
-            <li><a href="/blog">Pricing</a></li>
+            {% if config.extra.resources_1  %}
+            {% for resource in config.extra.resources_1 %}
+            <li><a href="{{ resource.url }}">{{ resource.name }}</a></li>
+            {% endfor %}
+            {% endif %}
           </ul>
         </div>
         <div class="link-block">
           <h4>Resources</h4>
           <ul>
-            <li><a href="/blog">Mission</a></li>
-            <li><a href="/blog">Careers</a></li>
-            <li><a href="/blog">Contact</a></li>
-            <li><a href="/blog">Press Kit</a></li>
+            {% if config.extra.resources_2  %}
+            {% for resource in config.extra.resources_2 %}
+            <li><a href="{{ resource.url }}">{{ resource.name }}</a></li>
+            {% endfor %}
+            {% endif %}
           </ul>
         </div>
         <div class="sign-up">
@@ -93,9 +94,15 @@
       <div class="bottom-of-footer">
         <p>Copyright 2016 - 2022</p>
         <ul class="social">
-          <!--<li><a href="/blog"><img width="24" src="/twitter.svg" /></a></li>-->
-          <li><a href="https://github.com/purton-tech/cloak"><img width="24" src="/github.svg" /></a></li>
-          <!--<li><a href="/blog"><img width="24" src="/linkedin.svg" /></a></li>-->
+          {% if config.extra.twitter %}
+          <li><a href="{{config.extra.twitter}}"><img width="24" src="/twitter.svg" /></a></li>
+          {% endif %}
+          {% if config.extra.github_repo %}
+          <li><a href="{{config.extra.github_repo}}"><img width="24" src="/github.svg" /></a></li>
+          {% endif %}
+          {% if config.extra.linkedin %}
+          <li><a href="{{config.extra.linkedin}}"><img width="24" src="/linkedin.svg" /></a></li>
+          {% endif %}
         </ul>
         <ul class="terms">
           <li><a href="/pages/terms">Terms</a></li>
