@@ -17,8 +17,10 @@
     </div>
   </section>
 
+  {% if config.extra.footer_cta %}
   <section class="m_footer_cta">
-    <h3>Start mananging your secrets today for free</h3>
-    <p><a class="a_button a_button--primary" href="/auth/sign_up">Sign Up</a></p>
+    <h3>{{config.extra.every_page_cta.title}}</h3>
+    <p><a class="a_button a_button--primary" href="{{config.extra.every_page_cta.cta_url}}">{{config.extra.every_page_cta.cta_button}}</a></p>
   </section>
+  {% endif %}
 {% endblock content %}

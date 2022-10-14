@@ -17,6 +17,9 @@ highlight_code = true
 app_base_url = "https://app.cloak.software"
 start_year = "2021"
 
+# Every page CTA. At the bottom of every blog post we have a cta
+every_page_cta = { title = "Your 30 seconds away from trying us out", cta_url = "/blog", cta_button = "Sign Up" }
+
 # On the footer we have a signup button and a call to action, set the text here
 footer_cta = { title = "Sign up for our service", prompt = "Get control of your secrets and add security.", cta_url = "/blog", cta_button = "Check it Out" }
 
