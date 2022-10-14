@@ -1,13 +1,13 @@
 {% extends "base.html" %}
-{% block class %} developers {% endblock %}
+{% block class %} documentation {% endblock %}
 
 {% block content %}
-<section class="l_developers prose">
+<section class="l_documentation prose">
   <div>
-    {% set intro_page = get_page(path="developers/introduction.md") %}
+    {% set intro_page = get_page(path="documentation/introduction.md") %}
     <aside>
       <h1>Getting Started</h1>
-      {% set section = get_section(path="developers/_index.md") %}
+      {% set section = get_section(path="documentation/_index.md") %}
       <ul>
         {% for page in section.pages %}
         <li><a href="{{ page.path | safe }}">{{ page.title }}</a></li>

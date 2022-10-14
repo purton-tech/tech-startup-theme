@@ -44,10 +44,10 @@
           {% endfor %}
           {% endif %}
 
-          <li><a class="menu-item" href="/developers/">Developers</a></li>
-          {% set intro_page = get_page(path="developers/introduction.md") %}
-          {% set dev_section = get_section(path="developers/_index.md") %}
-          <li class="sub-menu-item"><a href="/developers/">{{ intro_page.title }}</a></li>
+          <li><a class="menu-item" href="/documentation/">Documentation</a></li>
+          {% set intro_page = get_page(path="documentation/introduction.md") %}
+          {% set dev_section = get_section(path="documentation/_index.md") %}
+          <li class="sub-menu-item"><a href="/documentation/">{{ intro_page.title }}</a></li>
           {% for page in dev_section.pages %}
           <li class="sub-menu-item"><a href="{{ page.path | safe }}">{{ page.title }}</a></li>
           {% endfor %}

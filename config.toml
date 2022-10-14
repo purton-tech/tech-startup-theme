@@ -35,7 +35,7 @@ linkedin = "https://www.linkedin.com/in/ianpurton/"
 # Resources on the footer (LHS)
 resources_1 = [
     {name = "Blog", url = "/blog"},
-    {name = "Documentation", url = "/developers"},
+    {name = "Documentation", url = "/documentation"},
     {name = "FAQ", url = "/blog"},
 ]
 
