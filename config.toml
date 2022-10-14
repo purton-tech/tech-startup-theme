@@ -34,3 +34,7 @@ resources_2 = [
     {name = "Mission", url = "/blog"},
     {name = "Careers", url = "/blog"},
 ]
+
+menu_items = [
+    {name = "Pricing", url = "/pricing"}
+]

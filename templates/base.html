@@ -37,6 +37,13 @@
         </label><a href="/"><span>{{ config.title }}</span></a>
         <ul>
           <li><a class="menu-item" href="/blog/">Blog</a></li>
+
+          {% if config.extra.menu_items  %}
+          {% for resource in config.extra.menu_items %}
+          <li><a class="menu-item" href="{{ resource.url }}">{{ resource.name }}</a></li>
+          {% endfor %}
+          {% endif %}
+
           <li><a class="menu-item" href="/developers/">Developers</a></li>
           {% set intro_page = get_page(path="developers/introduction.md") %}
           {% set dev_section = get_section(path="developers/_index.md") %}
