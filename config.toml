@@ -14,7 +14,6 @@ build_search_index = true
 highlight_code = true
 
 [extra]
-app_base_url = "https://app.cloak.software"
 start_year = "2021"
 
 # Every page CTA. At the bottom of every blog post we have a cta
@@ -24,7 +23,10 @@ every_page_cta = { title = "Your 30 seconds away from trying us out", cta_url = 
 footer_cta = { title = "Sign up for our service", prompt = "Get control of your secrets and add security.", cta_url = "/blog", cta_button = "Check it Out" }
 
 # Where shall we point the sign in and sign up buttons.
-authentication = { signup = "/auth/sign_up", signin = "/auth/sign_up" }
+authentication = { sign_up = "https://example.com/auth/sign_up", sign_in = "https://example.com/auth/sign_in" }
+# When running on localhost you can set the sign up and sign links to somewhere else.
+localhost = "http://localhost:1111"
+authentication_development = { sign_up = "/auth/sign_up", sign_in = "/auth/sign_in" }
 
 # Information required by terms and privacy pages.
 support_email = "support@tech-startup.com"

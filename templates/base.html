@@ -53,14 +53,15 @@
           {% endfor %}
 
           <!-- {{ config.base_url}} -->
-          {% if config.base_url == "http://localhost:7400" %}
-          <li><a class="a_button a_button--primary" href="/auth/sign_up">Sign Up</a></li>
-          <li><a class="menu-item" href="/auth/sign_in">Sign In</a></li>
+          {% if config.extra.authentication and config.extra.localhost %}
+          {% if config.base_url == config.extra.localhost %}
+          <li><a class="a_button a_button--primary" href="{{ config.extra.authentication_development.sign_up }}">Sign Up</a></li>
+          <li><a class="menu-item" href="{{ config.extra.authentication_development.sign_in }}">Sign In</a></li>
           {% else %}
-          <li><a class="a_button a_button--primary" href="{{ config.extra.app_base_url}}/auth/sign_up">Sign Up</a></li>
-          <li><a class="menu-item" href="{{ config.extra.app_base_url}}/auth/sign_in">Sign In</a></li>
+          <li><a class="a_button a_button--primary" href="{{ config.extra.authentication.sign_up }}">Sign Up</a></li>
+          <li><a class="menu-item" href="{{ config.extra.authentication.sign_in }}">Sign In</a></li>
           {% endif %}
-
+          {% endif %}
         </ul>
       </nav>
     </div>
