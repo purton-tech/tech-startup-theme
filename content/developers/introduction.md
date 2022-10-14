@@ -1,62 +1,74 @@
 +++
-title = "Install the CLI"
+title = "Installation"
 date = 2019-11-27
 +++
 
-Installing the precompiled binary is the easiest way to get started with Cloak. Our binaries are publicly compiled using our CI/CD pipeline. Checksums for binaries are available on github.
 
-## Step 1. Install the precompiled binary (Linux)
+Just earlier we showed you how to run the theme directly. Now we start to
+install the theme in an existing site step by step.
 
-```sh
-$ sudo /bin/sh -c 'wget https://github.com/purton-tech/cloak/releases/latest/download/cloak-linux -O /usr/local/bin/cloak && chmod +x /usr/local/bin/cloak'
+### Step 1: Create a new zola site
+
+```bash
+zola init mysite
 ```
 
-Install a particular version 
+### Step 2: Install AdiDoks
 
-```sh
-$ export CLOAK_VERSION=1.1.0
-$ sudo /bin/sh -c "wget https://github.com/purton-tech/cloak/releases/download/v$CLOAK_VERSION/cli -O /usr/local/bin/cloak && chmod +x /usr/local/bin/cloak"
+Download this theme to your themes directory:
+
+```bash
+cd mysite/themes
+git clone https://github.com/aaranxu/adidoks.git
 ```
 
-## Step 1. Install the precompiled binary (Windows)
+Or install as a submodule:
 
-Coming soon.
-
-## Step 1. Install the precompiled binary (MacOS)
-
-```sh
-$ sudo /bin/sh -c 'curl https://github.com/purton-tech/cloak/releases/latest/download/cloak-macos -L -o /usr/local/bin/cloak && chmod +x /usr/local/bin/cloak'
+```bash
+cd mysite
+git init  # if your project is a git repository already, ignore this command
+git submodule add https://github.com/aaranxu/adidoks.git themes/adidoks
 ```
 
-## Step 2. Verify the checksum (Optional)
+### Step 3: Configuration
 
-Coming soon.
+Enable the theme in your `config.toml` in the site directory:
 
-## Step 3. Test the installation
-
-```sh
-$ cloak
-cloak 
-Secrets automation
-
-USAGE:
-    cloak [OPTIONS] <SUBCOMMAND>
-
-OPTIONS:
-    -a, --api-host-url <API_HOST_URL>
-            [env: API_HOST_URL=http://envoy:7100] [default: https://cloak.software]
-
-    -e, --ecdh-private-key <ECDH_PRIVATE_KEY>
-            [env: ECDH_PRIVATE_KEY=]
-
-        --ecdh-private-key-file <ECDH_PRIVATE_KEY_FILE>
-            [default: ./cloak.pem]
-
-    -h, --help
-            Print help information
-
-SUBCOMMANDS:
-    help       Print this message or the help of the given subcommand(s)
-    info       
-    secrets  
+```toml
+theme = "adidoks"
 ```
+
+Or copy the `config.toml.example` from the theme directory to your project's
+root directory:
+
+```bash
+cp themes/adidoks/config.toml.example config.toml
+```
+
+### Step 4: Add new content
+
+You can copy the content from the theme directory to your project:
+
+```bash
+cp -r themes/adidoks/content .
+```
+
+You can modify or add new posts in the `content/blog`, `content/docs` or other
+content directories as needed.
+
+### Step 5: Run the project
+
+Just run `zola serve` in the root path of the project:
+
+```bash
+zola serve
+```
+
+AdiDoks will start the Zola development web server accessible by default at
+`http://127.0.0.1:1111`. Saved changes will live reload in the browser.
+
+## Customisation
+
+You can customize your configurations, templates and content for yourself. Look
+at the `config.toml`, `theme.toml`, `content` files and templates files in this
+repo for an idea.
