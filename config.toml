@@ -15,12 +15,22 @@ highlight_code = true
 
 [extra]
 app_base_url = "https://app.cloak.software"
+start_year = "2021"
+
+# On the footer we have a signup button and a call to action, set the text here
+footer_cta = { title = "Sign up for our service", prompt = "Get control of your secrets and add security.", cta_url = "/blog", cta_button = "Check it Out" }
+
+# Where shall we point the sign in and sign up buttons.
+authentication = { signup = "/auth/sign_up", signin = "/auth/sign_up" }
+
+# Information required by terms and privacy pages.
 support_email = "support@tech-startup.com"
 company_address = "71-75 Shelton Street, London, LND, WC2H 9JQ, United Kingdom"
+
+# Social icons (shown on the footer)
 github_repo = "https://github.com/purton-tech/tech-startup-theme"
 twitter = "https://twitter.com/ianpurton"
 linkedin = "https://www.linkedin.com/in/ianpurton/"
-start_year = "2021"
 
 # Resources on the footer (LHS)
 resources_1 = [

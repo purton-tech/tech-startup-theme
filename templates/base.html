@@ -91,11 +91,13 @@
             {% endif %}
           </ul>
         </div>
+        {% if config.extra.footer_cta %}
         <div class="sign-up">
-          <h4>Sign up for our service</h4>
-          <p>Get control of your secrets and add security.</p>
-          <a class="a_button a_button--outline" href="/auth/sign_up">Check it Out</a>
+          <h4>{{config.extra.footer_cta.title}}</h4>
+          <p>{{config.extra.footer_cta.prompt}}</p>
+          <a class="a_button a_button--outline" href="{{config.extra.footer_cta.cta_url}}">{{config.extra.footer_cta.cta_button}}</a>
         </div>
+        {% endif %}
       </div>
       <hr />
       <div class="bottom-of-footer">
