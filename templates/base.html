@@ -102,7 +102,9 @@
       </div>
       <hr />
       <div class="bottom-of-footer">
-        <p>Copyright 2016 - 2022</p>
+        {% if config.extra.copyright %}
+        <p>{{config.extra.copyright}}</p>
+        {% endif %}
         <ul class="social">
           {% if config.extra.twitter %}
           <li><a href="{{config.extra.twitter}}"><img width="24" src="/twitter.svg" /></a></li>

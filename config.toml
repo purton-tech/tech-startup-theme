@@ -14,7 +14,7 @@ build_search_index = true
 highlight_code = true
 
 [extra]
-start_year = "2021"
+copyright = "Copyright 2021 - 2022"
 
 # Every page CTA. At the bottom of every blog post we have a cta
 every_page_cta = { title = "Your 30 seconds away from trying us out", cta_url = "/blog", cta_button = "Sign Up" }
