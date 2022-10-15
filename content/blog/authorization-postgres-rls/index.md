@@ -1,6 +1,9 @@
 +++
 title = "Implementing Authorization with Postgres Row Level Security (RLS)"
 date = 2022-09-19
+
+[extra]
+main_image = "blog-background.jpeg"
 +++
 
 ## Let's take a simple example of Authorization

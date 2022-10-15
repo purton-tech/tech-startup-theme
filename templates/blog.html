@@ -12,11 +12,24 @@
       </h2>
       <div class="cards">
         {% for page in section.pages %}
-        <div class="summary">
-          <h2>{{ page.title }}</h2>
-          <p class="subtitle"><strong>{{ page.date }}</strong></p>
-          <p><a href="{{ page.path | safe }}">Read More...</a></p>
-        </div>
+          {% if page.extra.main_image %}
+          <div class="summary with-image">
+            <div>
+              <img src="/{{ page.extra.main_image }}" />
+              <div>
+                <h3>{{ page.title }}</h3>
+                <p class="subtitle"><strong>{{ page.date }}</strong></p>
+                <p><a href="{{ page.path | safe }}">Read More...</a></p>
+              </div>
+            </div>
+          </div>
+          {% else %}
+          <div class="summary">
+            <h3>{{ page.title }}</h3>
+            <p class="subtitle"><strong>{{ page.date }}</strong></p>
+            <p><a href="{{ page.path | safe }}">Read More...</a></p>
+          </div>
+          {% endif %}
         {% endfor %}
       </div>
     </div>
