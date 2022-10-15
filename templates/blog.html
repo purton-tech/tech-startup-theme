@@ -2,18 +2,23 @@
 {% block class %} blog {% endblock %}
 
 {% block content %}
-  <section class="l_blog">
+  <section class="blog_hero">
+    <img src="/blog-background.jpeg" />
+  </section>
+  <section class="l_blog featured">
     <div>
-      <h1 class="title">
-        {{ section.title }}
-      </h1>
-      {% for page in section.pages %}
-      <div class="summary">
-        <h2>{{ page.title }}</h2>
-        <p class="subtitle"><strong>{{ page.date }}</strong></p>
-        <p><a href="{{ page.path | safe }}">Read More...</a></p>
+      <h2>
+        Featured Posts
+      </h2>
+      <div class="cards">
+        {% for page in section.pages %}
+        <div class="summary">
+          <h2>{{ page.title }}</h2>
+          <p class="subtitle"><strong>{{ page.date }}</strong></p>
+          <p><a href="{{ page.path | safe }}">Read More...</a></p>
+        </div>
+        {% endfor %}
       </div>
-      {% endfor %}
     </div>
   </section>
 
