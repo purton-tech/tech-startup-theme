@@ -5,22 +5,28 @@
     &.white {
         background-color: rgb(241, 236, 251);
     }
-    
+
     > div {
         margin-left: auto;
         margin-right: auto;
-        max-width: var(--content-width);
         padding: 2rem;
-        text-align: center;
-
-        > h2, h4 {
-            padding-left: 8rem;
-            padding-right: 8rem;
-        }
+    }
     
-        > img {
-            width: 80%;
-            border: 1px solid rgb(215, 215, 255);
+    @include for-tablet-landscape-up {
+
+        > div {
+            max-width: var(--content-width);
+            text-align: center;
+
+            > h2, h4 {
+                padding-left: 8rem;
+                padding-right: 8rem;
+            }
+        
+            > img {
+                width: 80%;
+                border: 1px solid rgb(215, 215, 255);
+            }
         }
     }
 }
