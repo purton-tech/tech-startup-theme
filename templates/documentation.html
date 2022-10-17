@@ -12,13 +12,21 @@
         <li><a href="{{ page.path | safe }}">{{ page.title }}</a></li>
         {% endfor %}
       </ul>
-      <h1>Reference</h1>
+
+
+      {% if config.extra.doc_sections  %}
+      {% for resource in config.extra.doc_sections %}
+      <h1>{{ resource.name }}</h1>
       <ul>
-        {% set reference_section = get_section(path="reference/_index.md") %}
+        {% set path = resource.location ~ "/_index.md" %}
+        {% set reference_section = get_section(path=path) %}
         {% for page in reference_section.pages %}
         <li><a href="{{ page.path | safe }}">{{ page.title }}</a></li>
         {% endfor %}
       </ul>
+      {% endfor %}
+      {% endif %}
+      
     </aside>
     <main>
       <div>

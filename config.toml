@@ -53,3 +53,8 @@ resources_2 = [
 menu_items = [
     {name = "Pricing", url = "/pricing"}
 ]
+
+# Documentation sections
+doc_sections = [
+    {name = "Reference", location = "reference"},
+]
