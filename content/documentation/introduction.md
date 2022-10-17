@@ -13,13 +13,13 @@ install the theme in an existing site step by step.
 zola init mysite
 ```
 
-### Step 2: Install AdiDoks
+### Step 2: Install The Tech Startup Theme
 
 Download this theme to your themes directory:
 
 ```bash
 cd mysite/themes
-git clone https://github.com/aaranxu/adidoks.git
+git clone https://github.com/purton-tech/tech-startup-theme.git
 ```
 
 Or install as a submodule:
@@ -27,7 +27,7 @@ Or install as a submodule:
 ```bash
 cd mysite
 git init  # if your project is a git repository already, ignore this command
-git submodule add https://github.com/aaranxu/adidoks.git themes/adidoks
+git submodule add https://github.com/purton-tech/tech-startup-theme.git themes/tech-startup-theme
 ```
 
 ### Step 3: Configuration
@@ -35,14 +35,14 @@ git submodule add https://github.com/aaranxu/adidoks.git themes/adidoks
 Enable the theme in your `config.toml` in the site directory:
 
 ```toml
-theme = "adidoks"
+theme = "tech-startup-theme"
 ```
 
 Or copy the `config.toml.example` from the theme directory to your project's
 root directory:
 
 ```bash
-cp themes/adidoks/config.toml.example config.toml
+cp themes/tech-startup-theme/config.toml config.toml
 ```
 
 ### Step 4: Add new content
@@ -50,7 +50,7 @@ cp themes/adidoks/config.toml.example config.toml
 You can copy the content from the theme directory to your project:
 
 ```bash
-cp -r themes/adidoks/content .
+cp -r themes/tech-startup-theme/content .
 ```
 
 You can modify or add new posts in the `content/blog`, `content/docs` or other
