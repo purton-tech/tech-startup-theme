@@ -99,7 +99,11 @@
         <div class="sign-up">
           <h4>{{config.extra.footer_cta.title}}</h4>
           <p>{{config.extra.footer_cta.prompt}}</p>
+          {% if config.extra.footer_cta.cta_url  %}
           <a class="a_button a_button--outline" href="{{config.extra.footer_cta.cta_url}}">{{config.extra.footer_cta.cta_button}}</a>
+          {% else %}
+          <a class="a_button a_button--outline" href="{{sign_up_url}}">{{config.extra.footer_cta.cta_button}}</a>
+          {% endif %}
         </div>
         {% endif %}
       </div>
