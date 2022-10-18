@@ -60,7 +60,7 @@
           {% set index = get_section(path=index_path) %}
           {% if index.pages %}
             {% for page in index.pages %}                           
-                <li class="sub-menu-item"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+                <li class="sub-menu-item"><a href="{{ page.path | safe }}">{{ page.title }}</a></li>
             {% endfor %}
           {% endif %}
           {% if index.subsections %}
@@ -68,7 +68,7 @@
               {% set subsection = get_section(path=s) %}
               {% if subsection.pages %}
               {% for page in subsection.pages %}                           
-                  <li class="sub-menu-item"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+                  <li class="sub-menu-item"><a href="{{ page.path | safe }}">{{ page.title }}</a></li>
               {% endfor %}
               {% endif %}
               {% endfor %}

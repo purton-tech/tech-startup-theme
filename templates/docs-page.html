@@ -13,7 +13,7 @@
 		<h1>{{ index.title }}</h1>
 		<ul >
 		{% for page in index.pages %}                           
-				<li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+				<li><a href="{{ page.path | safe }}">{{ page.title }}</a></li>
 		{% endfor %}
 		</ul>
 	{% endif %}
@@ -24,7 +24,7 @@
 			<h1>{{ subsection.title }}</h1>
 			<ul >
 			{% for page in subsection.pages %}                           
-					<li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+					<li><a href="{{ page.path | safe }}">{{ page.title }}</a></li>
 			{% endfor %}
 			</ul>
 			{% endif %}
