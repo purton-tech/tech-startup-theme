@@ -1,5 +1,6 @@
 +++
 title = "Developer Documentation"
-sort_by = "date"
+sort_by = "weight"
+weight = 1
 template = "docs.html"
 +++
