@@ -53,12 +53,26 @@
           {% endfor %}
           {% endif %}
 
-          <li><a class="menu-item" href="/documentation/">Documentation</a></li>
-          {% set intro_page = get_page(path="documentation/introduction.md") %}
-          {% set dev_section = get_section(path="documentation/_index.md") %}
-          {% for page in dev_section.pages %}
-          <li class="sub-menu-item"><a href="{{ page.path | safe }}">{{ page.title }}</a></li>
-          {% endfor %}
+          <li><a class="menu-item" href="{{ config.extra.first_doc_page | default(value='/docs') | safe }}">Documentation</a></li>
+          
+          
+          {% set index_path = "docs/_index.md" %}
+          {% set index = get_section(path=index_path) %}
+          {% if index.pages %}
+            {% for page in index.pages %}                           
+                <li class="sub-menu-item"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+            {% endfor %}
+          {% endif %}
+          {% if index.subsections %}
+              {% for s in index.subsections %}
+              {% set subsection = get_section(path=s) %}
+              {% if subsection.pages %}
+              {% for page in subsection.pages %}                           
+                  <li class="sub-menu-item"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+              {% endfor %}
+              {% endif %}
+              {% endfor %}
+          {% endif %}
 
           <!-- {{ config.base_url}} -->
           {% if config.extra.authentication and config.extra.localhost %}

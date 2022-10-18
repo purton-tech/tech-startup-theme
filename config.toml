@@ -37,10 +37,12 @@ github_repo = "https://github.com/purton-tech/tech-startup-theme"
 twitter = "https://twitter.com/ianpurton"
 linkedin = "https://www.linkedin.com/in/ianpurton/"
 
+first_doc_page = "/docs/getting-started/introduction/"
+
 # Resources on the footer (LHS)
 resources_1 = [
     {name = "Blog", url = "/blog"},
-    {name = "Documentation", url = "/documentation"},
+    {name = "Documentation", url = "/docs/getting-started/introduction"},
     {name = "FAQ", url = "/blog"},
 ]
 
@@ -51,7 +53,7 @@ resources_2 = [
 ]
 
 menu_items = [
-    {name = "Pricing", url = "/pricing"}
+    {name = "Pricing", url = "/pricing"},
 ]
 
 # Documentation sections
