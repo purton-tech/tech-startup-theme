@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8"></meta>
   <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
@@ -26,6 +25,15 @@
   {% endif %}
 </head>
 
+{% if config.extra.authentication and config.extra.localhost %}
+  {% if config.base_url == config.extra.localhost %}
+    {% set sign_up_url = config.extra.authentication_development.sign_up %}
+    {% set sign_in_url = config.extra.authentication_development.sign_in %}
+  {% else %}
+    {% set sign_up_url = config.extra.authentication.sign_up %}
+    {% set sign_in_url = config.extra.authentication.sign_in %}
+  {% endif %}
+{% endif %}
 <body class="l_marketing">
   <header>
     <div class="m_navbar {% block class %}{% endblock %}">
@@ -54,13 +62,8 @@
 
           <!-- {{ config.base_url}} -->
           {% if config.extra.authentication and config.extra.localhost %}
-          {% if config.base_url == config.extra.localhost %}
-          <li><a class="a_button a_button--primary" href="{{ config.extra.authentication_development.sign_up }}">Sign Up</a></li>
-          <li><a class="menu-item" href="{{ config.extra.authentication_development.sign_in }}">Sign In</a></li>
-          {% else %}
-          <li><a class="a_button a_button--primary" href="{{ config.extra.authentication.sign_up }}">Sign Up</a></li>
-          <li><a class="menu-item" href="{{ config.extra.authentication.sign_in }}">Sign In</a></li>
-          {% endif %}
+          <li><a class="a_button a_button--primary" href="{{ sign_up_url }}">Sign Up</a></li>
+          <li><a class="menu-item" href="{{ sign_in_url }}">Sign In</a></li>
           {% endif %}
         </ul>
       </nav>
