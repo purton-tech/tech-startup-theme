@@ -40,6 +40,23 @@
         {{ page.content | safe }}
       </div>
     </main>
+
+	<aside class="toc">
+
+		<h3>On this page</h3>
+		<ul>
+			{% for h1 in page.toc %}
+			<li><a href="{{ h1.permalink | safe}}">{{ h1.title }}</a></li>
+			{% if h1.children %}
+					<ul>
+							{% for h2 in h1.children %}
+							<li><a href="{{ h2.permalink | safe }}">{{ h2.title }}</a></li>
+							{% endfor %}
+					</ul>
+			{% endif %}
+			{% endfor %}
+		</ul>
+	</aside>
   </div>
 </section>
 {% endblock content %}
