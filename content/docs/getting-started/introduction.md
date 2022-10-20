@@ -6,8 +6,7 @@ template = "docs-page.html"
 +++
 
 
-Just earlier we showed you how to run the theme directly. Now we start to
-install the theme in an existing site step by step.
+This is a step by step guide to installing the theme.
 
 ### Step 1: Create a new zola site
 
@@ -66,7 +65,7 @@ Just run `zola serve` in the root path of the project:
 zola serve
 ```
 
-AdiDoks will start the Zola development web server accessible by default at
+This will start the Zola development web server accessible by default at
 `http://127.0.0.1:1111`. Saved changes will live reload in the browser.
 
 ## Customisation

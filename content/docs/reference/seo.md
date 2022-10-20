@@ -1,6 +1,5 @@
 +++
-title = "Test Page"
-date = 2019-11-27
+title = "SEO"
 weight = 10
 template = "docs-page.html"
 +++
