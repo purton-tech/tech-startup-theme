@@ -10,7 +10,7 @@
 	{% set index_path = current_section ~ "/_index.md" | trim_start_matches(pat="/") %}
 	{% set index = get_section(path=index_path) %}
 	{% if index.pages %}
-		<h1>{{ index.title }}</h1>
+		<h3>{{ index.title }}</h3>
 		<ul >
 		{% for page in index.pages %}                           
 				<li><a href="{{ page.path | safe }}">{{ page.title }}</a></li>
@@ -21,7 +21,7 @@
 			{% for s in index.subsections %}
 			{% set subsection = get_section(path=s) %}
 			{% if subsection.pages %}
-			<h1>{{ subsection.title }}</h1>
+			<h3>{{ subsection.title }}</h3>
 			<ul >
 			{% for page in subsection.pages %}                           
 					<li><a href="{{ page.path | safe }}">{{ page.title }}</a></li>
@@ -33,7 +33,7 @@
 	</aside>
     
     <main>
-      <div>
+      <div class="markdown-body">
         <h1 class="title">
           {{ page.title }}
         </h1>

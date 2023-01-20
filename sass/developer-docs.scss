@@ -8,7 +8,6 @@
         margin-right: auto;
         max-width: var(--article-width);
         width: 100%;
-        padding: var(--mobile-content-padding);
 
         > aside {
             display: none;
@@ -26,7 +25,6 @@
 
         
         @include for-tablet-portrait-up {
-            padding-top: 5rem;
 
             > main {
                 padding: 1rem;
