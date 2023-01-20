@@ -8,7 +8,6 @@ div.m_navbar {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  font-family: var(--font-family-mono);
   text-transform: uppercase;
   box-shadow: var(--shadow-small);
 
@@ -18,8 +17,6 @@ div.m_navbar {
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    padding-left: 1em;
-    padding-right: 1em;
     margin: 0;
 
     // The checkbox
@@ -40,6 +37,7 @@ div.m_navbar {
 
     .menu-item {
       text-decoration: none;
+      font-weight: 400;
       color: black;
       line-height: 1.25rem;
     }
