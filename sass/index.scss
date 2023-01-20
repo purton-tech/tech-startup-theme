@@ -39,7 +39,7 @@ img {
     --blog-content-width: 800px;
     --article-width: 45rem;
     --content-padding: 10rem 1em 30px 1em;
-    --mobile-content-padding: 2rem 1em 30px 1em;
+    --mobile-content-padding: 2//rem 1em 30px 1em;
 }
 
 html {
@@ -69,15 +69,8 @@ body {
 
 @import './navbar';
 @import './footer';
-//@import './buttons';
-//@import './cta';
-@import './footer-cta';
 @import './developer-docs';
 @import './blog';
 @import './blog-list';
-//@import './typography';
-//@import './utility';
-//@import './cards';
-//@import './landing';
 @import './pricing';
 @import './copy-clipboard';

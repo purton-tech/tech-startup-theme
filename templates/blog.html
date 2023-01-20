@@ -2,47 +2,49 @@
 {% block class %} blog {% endblock %}
 
 {% block content %}
-  <section class="blog_hero">
-    <img src="/blog-background.jpeg" />
-  </section>
-  <section class="l_blog_list">
-    <div>
-      <h2>
-        Featured Posts
-      </h2>
-      <div class="cards">
-        {% for page in section.pages %}
-          {% if page.extra.main_image %}
-          <div class="summary with-image">
-            <div>
-              <img src="/{{ page.extra.main_image }}" />
-              <div>
-                <h3>{{ page.title }}</h3>
-                <p class="subtitle"><strong>{{ page.date }}</strong></p>
-                <p><a href="{{ page.path | safe }}">Read More...</a></p>
-              </div>
-            </div>
-          </div>
-          {% else %}
-          <div class="summary">
+<section class="content d-flex flex-content-center flex-column mt-12 text-center">
+  <h1 class="h3-mktg mb-4">The Blog</h1>
+  <h2 class="h6-mktg color-fg-muted mb-4">Ideas, Updates and Inspiration</h2>
+</section>
+<section class="l_blog_list">
+  <div>
+    <h2>
+      Featured Posts
+    </h2>
+    <div class="cards">
+      {% for page in section.pages %}
+      {% if page.extra.main_image %}
+      <div class="summary with-image">
+        <div>
+          <img src="/{{ page.extra.main_image }}" />
+          <div>
             <h3>{{ page.title }}</h3>
             <p class="subtitle"><strong>{{ page.date }}</strong></p>
             <p><a href="{{ page.path | safe }}">Read More...</a></p>
           </div>
-          {% endif %}
-        {% endfor %}
+        </div>
       </div>
+      {% else %}
+      <div class="summary">
+        <h3>{{ page.title }}</h3>
+        <p class="subtitle"><strong>{{ page.date }}</strong></p>
+        <p><a href="{{ page.path | safe }}">Read More...</a></p>
+      </div>
+      {% endif %}
+      {% endfor %}
     </div>
-  </section>
+  </div>
+</section>
 
-  {% if config.extra.footer_cta %}
-  <section class="m_footer_cta">
-    <h3>{{config.extra.every_page_cta.title}}</h3>
-    {% if config.extra.every_page_cta.cta_url  %}
-    <p><a class="a_button a_button--primary" href="{{config.extra.every_page_cta.cta_url}}">{{config.extra.every_page_cta.cta_button}}</a></p>
-    {% else %}
-    <p><a class="a_button a_button--primary" href="{{sign_up_url}}">{{config.extra.every_page_cta.cta_button}}</a></p>
-    {% endif %}
-  </section>
+{% if config.extra.footer_cta %}
+<section class="d-flex flex-content-center flex-column mt-8 mb-8 text-center">
+  <h3 class="mb-3">{{config.extra.every_page_cta.title}}</h3>
+  {% if config.extra.every_page_cta.cta_url %}
+  <p><a class="btn-mktg"
+      href="{{config.extra.every_page_cta.cta_url}}">{{config.extra.every_page_cta.cta_button}}</a></p>
+  {% else %}
+  <p><a class="btn-mktg" href="{{sign_up_url}}">{{config.extra.every_page_cta.cta_button}}</a></p>
   {% endif %}
+</section>
+{% endif %}
 {% endblock content %}
