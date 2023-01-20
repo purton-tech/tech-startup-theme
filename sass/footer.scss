@@ -3,8 +3,6 @@
 .m_footer {
     font-family: var(--font-family-mono);
     text-transform: uppercase;
-    font-size: .875rem;
-    line-height: 1.25rem;
 
     > div {
         // Set a max width and center content
@@ -12,6 +10,7 @@
         margin-right: auto;
         max-width: var(--content-width);
         padding: var(--content-padding);
+        padding-top: 3rem;
     }
     
     background-color: black;
