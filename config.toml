@@ -20,7 +20,7 @@ copyright = "Copyright 2021 - 2022"
 every_page_cta = { title = "You're 30 seconds away from trying us out", cta_url = "/blog", cta_button = "Sign Up" }
 
 # On the footer we have a signup button and a call to action, set the text here
-footer_cta = { title = "Sign up for our service", prompt = "Get control of your secrets and add security.", cta_url = "/blog", cta_button = "Check it Out" }
+footer_cta = { title = "Sign up for our service", prompt = "Footer prompt.", cta_url = "/blog", cta_button = "Check it Out" }
 
 # Where shall we point the sign in and sign up buttons.
 authentication = { sign_up = "/blog", sign_in = "/blog" }
