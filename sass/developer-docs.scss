@@ -38,6 +38,10 @@
                 display: block;
                 padding-top: 2rem;
 
+                > h3 {
+                    margin-bottom: 1rem;
+                }
+
                 // Keep us at the top
                 position: sticky;
                 top: 4rem;
