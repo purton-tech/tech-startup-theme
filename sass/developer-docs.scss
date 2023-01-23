@@ -8,12 +8,13 @@
         margin-right: auto;
         max-width: var(--article-width);
         width: 100%;
-        margin-top: 2rem;
+        margin-top: 3rem;
         margin-bottom: 2rem;
         padding-left: 1rem;
         padding-right: 1rem;
 
         > aside {
+            margin-top: 2rem;
             display: none;
         }
 

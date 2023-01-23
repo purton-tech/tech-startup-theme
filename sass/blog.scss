@@ -31,9 +31,6 @@
 
 @include for-tablet-portrait-up {
     .l_blog {
-
-        > div {
-            padding: var(--content-padding);
-        }
+        margin-top: 6rem;
     }
 }

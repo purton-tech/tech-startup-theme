@@ -1,3 +1,5 @@
+@import "responsive-mixin";
+
 // https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 *, *:before, *:after {
     box-sizing: inherit;
@@ -65,12 +67,16 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
     max-width: var(--blog-content-width);
+
+    @include for-tablet-portrait-up {
+        padding-top: 6rem;
+    }
 }
 
 @import './navbar';
 @import './footer';
 @import './developer-docs';
-@import './blog';
+//@import './blog';
 @import './blog-list';
 @import './pricing';
 @import './copy-clipboard';
