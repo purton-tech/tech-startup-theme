@@ -44,6 +44,7 @@ class LiteYTEmbed extends HTMLElement {
         // Press play with a suer defined element
         document.querySelector('.start-youtube').addEventListener("click",  (event) => {
             playBtnEl.click();
+            event.stopPropagation();
         });
 
         // Chrome & Edge desktop have no problem with the basic YouTube Embed with ?autoplay=1
