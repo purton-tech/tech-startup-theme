@@ -136,8 +136,11 @@ div.m_navbar {
 
 @include for-tablet-portrait-up {
   div.m_navbar {
-    position: fixed;
-    top: 0;
+    @media screen and (min-height: 900px ) 
+    {
+        position: fixed;
+        top: 0;
+    }
     width: 100%;
     nav {
       > ul {
