@@ -78,6 +78,12 @@ body {
     }
 }
 
+// Override 
+.markdown-body pre {
+    background-color:#2b303b;
+    color:#c0c5ce;
+}
+
 @import './navbar';
 @import './footer';
 @import './developer-docs';
