@@ -60,3 +60,7 @@ menu_items = [
 doc_sections = [
     {name = "Reference", location = "reference"},
 ]
+
+# Blog tile and subtitle
+blog_title = "Our Blog"
+blog_subtitle = "Things to read"
