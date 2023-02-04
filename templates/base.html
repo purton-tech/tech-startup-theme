@@ -27,9 +27,7 @@
   {% endif %}
   <!-- https://www.goatcounter.com/ -->
   {% if config.extra.goat_counter %}
-  <script async src="/goat-counter.js"></script>
-  <script data-goatcounter="{{ config.extra.goat_counter}}">
-  </script>
+  <script async data-goatcounter="{{ config.extra.goat_counter}}" src="/goat-counter.js"></script>
   {% endif %}
 </head>
 
