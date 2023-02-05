@@ -29,6 +29,10 @@
   {% if config.extra.goat_counter %}
   <script async data-goatcounter="{{ config.extra.goat_counter}}" src="/goat-counter.js"></script>
   {% endif %}
+  <!-- https://beamanalytics.io/ -->
+  {% if config.extra.beam_analytics %}
+  <script src="https://beamanalytics.b-cdn.net/beam.min.js" data-token="{{ config.extra.beam_analytics}}" async></script>
+  {% endif %}
 </head>
 
 {% if config.extra.authentication and config.extra.localhost %}
