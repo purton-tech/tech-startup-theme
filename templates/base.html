@@ -8,12 +8,10 @@
   {% else %}
   <title>{{ config.title }}</title>
   {% endif %}
-  <link rel="stylesheet" href="/primer.css?h={{get_file_hash(path="static/primer.css", sha_type=256)}}">
-  <link rel="stylesheet" href="/index.css?h={{get_file_hash(path="public/index.css", sha_type=256)}}">
+  <link rel="stylesheet" href="/index.css?h={{get_file_hash(path="static/index.css", sha_type=256)}}">
   <link rel="stylesheet" href="/syntax-theme.css?h={{get_file_hash(path="static/syntax-theme.css", sha_type=256)}}">
+  <script async src="/index.js?h={{get_file_hash(path="static/index.js", sha_type=256)}}"></script>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <script async src="/copy-clipboard.js"></script>
-  <script async src="/embed-yt-lite.js"></script>
   {% if config.extra.ga_analytics and config.base_url != "http://localhost:7400" %}
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ config.extra.ga_analytics}}"></script>
@@ -24,14 +22,6 @@
 
     gtag('config', '{{ config.extra.ga_analytics}}');
   </script>
-  {% endif %}
-  <!-- https://www.goatcounter.com/ -->
-  {% if config.extra.goat_counter %}
-  <script async data-goatcounter="{{ config.extra.goat_counter}}" src="/goat-counter.js"></script>
-  {% endif %}
-  <!-- https://beamanalytics.io/ -->
-  {% if config.extra.beam_analytics %}
-  <script src="https://beamanalytics.b-cdn.net/beam.min.js" data-token="{{ config.extra.beam_analytics}}" async></script>
   {% endif %}
 </head>
 
@@ -44,7 +34,14 @@
     {% set sign_in_url = config.extra.authentication.sign_in %}
   {% endif %}
 {% endif %}
+
+
+<!-- https://www.goatcounter.com/ -->
+{% if config.extra.goat_counter %}
+<body class="l_marketing" data-goatcounter="{{ config.extra.goat_counter}}">
+{% else %}
 <body class="l_marketing">
+{% endif %}
   <header>
     <div class="m_navbar {% block class %}{% endblock %}">
       <nav>

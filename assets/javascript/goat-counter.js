@@ -10,7 +10,7 @@
 		window.goatcounter = window.goatcounter || {}
 
 	// Load settings from data-goatcounter-settings.
-	var s = document.querySelector('script[data-goatcounter]')
+	var s = document.querySelector('body[data-goatcounter]')
 	if (s && s.dataset.goatcounterSettings) {
 		try         { var set = JSON.parse(s.dataset.goatcounterSettings) }
 		catch (err) { console.error('invalid JSON in data-goatcounter-settings: ' + err) }

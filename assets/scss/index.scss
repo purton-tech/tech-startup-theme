@@ -1,6 +1,18 @@
 @import "responsive-mixin";
 @import "embed-yt-lite";
 
+// Primer Design System https://primer.style/
+@import '@primer/css/alerts/index.scss';
+@import '@primer/css/base/index.scss';
+@import '@primer/css/buttons/index.scss';
+//@import '@primer/css/forms/form-select.scss';
+@import '@primer/css/color-modes/index.scss';
+@import '@primer/css/overlay/index.scss';
+@import '@primer/css/utilities/index.scss';
+@import '@primer/css/marketing/index.scss';
+@import '@primer/css/markdown/index.scss';
+@import '@primer/css/layout/index.scss';
+
 lite-youtube {
     background-image: url('https://trace-3ja.pages.dev/dashboard.png');
 }
@@ -87,7 +99,5 @@ body {
 @import './navbar';
 @import './footer';
 @import './developer-docs';
-//@import './blog';
 @import './blog-list';
-@import './pricing';
 @import './copy-clipboard';
