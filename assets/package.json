@@ -1,6 +1,5 @@
 {
   "scripts": {
-    "start": "parcel watch ./index.ts --dist-dir ../static",
     "release": "parcel build ./index.ts --dist-dir ../static"
   },
   "devDependencies": {
