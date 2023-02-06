@@ -557,12 +557,12 @@ function hmrAccept(bundle, id) {
 }
 
 },{}],"1jwFz":[function(require,module,exports) {
-//import './scss/index.scss'
+var _indexScss = require("./scss/index.scss");
 var _copyClipboardJs = require("./javascript/copy-clipboard.js");
 var _goatCounterJs = require("./javascript/goat-counter.js");
 var _embedYtLiteJs = require("./javascript/embed-yt-lite.js");
 
-},{"./javascript/copy-clipboard.js":"k1vnI","./javascript/goat-counter.js":"PyZA7","./javascript/embed-yt-lite.js":"bALW9"}],"k1vnI":[function(require,module,exports) {
+},{"./javascript/copy-clipboard.js":"k1vnI","./javascript/goat-counter.js":"PyZA7","./javascript/embed-yt-lite.js":"bALW9","./scss/index.scss":"b5Vku"}],"k1vnI":[function(require,module,exports) {
 const copyButtonLabel = "Copy";
 // use a class selector if available
 let blocks = document.querySelectorAll("pre");
@@ -955,6 +955,6 @@ async function copyCode(event) {
 // Register custom element
 customElements.define("lite-youtube", LiteYTEmbed);
 
-},{}]},["cFWjG","1jwFz"], "1jwFz", "parcelRequire94c2")
+},{}],"b5Vku":[function() {},{}]},["cFWjG","1jwFz"], "1jwFz", "parcelRequire94c2")
 
 //# sourceMappingURL=index.js.map
