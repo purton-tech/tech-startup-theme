@@ -557,12 +557,12 @@ function hmrAccept(bundle, id) {
 }
 
 },{}],"1jwFz":[function(require,module,exports) {
-var _indexScss = require("./scss/index.scss");
+//import './scss/index.scss'
 var _copyClipboardJs = require("./javascript/copy-clipboard.js");
 var _goatCounterJs = require("./javascript/goat-counter.js");
 var _embedYtLiteJs = require("./javascript/embed-yt-lite.js");
 
-},{"./scss/index.scss":"b5Vku","./javascript/copy-clipboard.js":"k1vnI","./javascript/goat-counter.js":"PyZA7","./javascript/embed-yt-lite.js":"bALW9"}],"b5Vku":[function() {},{}],"k1vnI":[function(require,module,exports) {
+},{"./javascript/copy-clipboard.js":"k1vnI","./javascript/goat-counter.js":"PyZA7","./javascript/embed-yt-lite.js":"bALW9"}],"k1vnI":[function(require,module,exports) {
 const copyButtonLabel = "Copy";
 // use a class selector if available
 let blocks = document.querySelectorAll("pre");
