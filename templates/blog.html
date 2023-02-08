@@ -10,10 +10,11 @@
   <div>
     <div class="cards">
       {% for page in section.pages %}
-      {% if page.extra.main_image %}
+      {% if page.extra.listing_image %}
       <div class="summary with-image">
         <div>
-          <img src="/{{ page.extra.main_image }}" />
+          {% set image = resize_image(path=page.extra.listing_image, width=198, height=198, op="fill") %}
+          <img src="{{ image.url }}" />
           <div>
             <h3>{{ page.title }}</h3>
             <p class="subtitle"><strong>{{ page.date }}</strong></p>

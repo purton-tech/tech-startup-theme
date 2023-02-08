@@ -4,6 +4,7 @@ date = 2022-09-19
 
 [extra]
 main_image = "blog-background.jpeg"
+listing_image = "blog/before-you-start-your-startup/satellites-negotiating.png"
 +++
 
 ## Let's take a simple example of Authorization
