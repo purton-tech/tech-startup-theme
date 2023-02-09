@@ -16,6 +16,7 @@
         > aside {
             margin-top: 2rem;
             display: none;
+            overflow: auto;
         }
 
         > main {
@@ -68,13 +69,13 @@
                     border-bottom: 1px solid #e9ecef;
         
                     > li {
-                        padding-bottom: 1rem;
+                        padding-bottom: 0.5rem;
                         > a {
                             text-decoration: none;
                         }
                     }
                 }
-                width: 300px;
+                width: 350px;
             }
 
             display: flex;
