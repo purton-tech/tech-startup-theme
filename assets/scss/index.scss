@@ -1,5 +1,4 @@
 @import "responsive-mixin";
-@import "embed-yt-lite";
 
 // Primer Design System https://primer.style/
 @import '@primer/css/alerts/index.scss';
@@ -12,10 +11,6 @@
 @import '@primer/css/marketing/index.scss';
 @import '@primer/css/markdown/index.scss';
 @import '@primer/css/layout/index.scss';
-
-lite-youtube {
-    background-image: url('../../static/dashboard.png');
-}
 
 // https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 *, *:before, *:after {
@@ -101,3 +96,4 @@ body {
 @import './developer-docs';
 @import './blog-list';
 @import './copy-clipboard';
+@import './play-button';
