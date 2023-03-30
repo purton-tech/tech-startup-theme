@@ -49,13 +49,12 @@ img {
 }
 
 :root {
-    --content-width: 1040px;
+    --content-width: 1200px;
     --blog-content-width: 800px;
     --article-width: 45rem;
     --content-padding: 10rem 1em 30px 1em;
     --mobile-content-padding: 2//rem 1em 30px 1em;
 }
-
 html {
     box-sizing: border-box;
     font-family: var(--font-family-light);
@@ -79,11 +78,8 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
     max-width: var(--blog-content-width);
-
-    @include for-tablet-portrait-up {
-        padding-top: 6rem;
-    }
 }
+
 
 // Override 
 .markdown-body pre {

@@ -135,7 +135,16 @@ div.m_navbar {
 }
 
 @include for-tablet-portrait-up {
+  div#main {
+    margin-top: 60px;
+    // On small height screens, let the nav scroll out of view.
+    @media screen and (min-height: 900px ) 
+    {
+      margin-top: 140px;
+    }
+  }
   div.m_navbar {
+    // On small height screens, let the nav scroll out of view.
     @media screen and (min-height: 900px ) 
     {
         position: fixed;
