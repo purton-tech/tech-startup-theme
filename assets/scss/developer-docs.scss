@@ -38,6 +38,12 @@
                 border-right: 1px solid #e9ecef;
             }
 
+            > aside:first-of-type {
+                > ul {
+                    padding-right: 1rem;
+                }
+            }
+
             > aside {
                 display: block;
 
