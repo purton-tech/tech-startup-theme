@@ -17,8 +17,8 @@ div.m_navbar {
     align-items: center;
     height: 80px;
     margin: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 
     // The checkbox
     > input {
@@ -136,11 +136,10 @@ div.m_navbar {
 
 @include for-tablet-portrait-up {
   div#main {
-    margin-top: 60px;
     // On small height screens, let the nav scroll out of view.
     @media screen and (min-height: 900px ) 
     {
-      margin-top: 140px;
+      padding-top: 80px;
     }
   }
   div.m_navbar {
