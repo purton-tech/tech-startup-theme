@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "release": "parcel build ./index.ts --dist-dir ../static"
+    "release": "parcel build ./primer-index.ts --dist-dir ../static"
   },
   "devDependencies": {
     "@primer/css": "20.6.0",
