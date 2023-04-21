@@ -12,7 +12,7 @@ RUN echo 'git config core.hooksPath /vscode/.devcontainer/.githooks' >> ~/.bashr
 ARG USERNAME=vscode
 #RUN sudo mkdir -p /workspace/target && sudo chown $USERNAME:$USERNAME /workspace/target
 
-ARG ZOLA_VERSION=0.15.3
+ARG ZOLA_VERSION=0.17.2
 RUN sudo curl -OL https://github.com/getzola/zola/releases/download/v$ZOLA_VERSION/zola-v$ZOLA_VERSION-x86_64-unknown-linux-gnu.tar.gz \
     && sudo tar -xvf zola-v$ZOLA_VERSION-x86_64-unknown-linux-gnu.tar.gz \
     && sudo mv zola /usr/bin/zola \
