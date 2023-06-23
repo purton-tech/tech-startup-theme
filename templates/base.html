@@ -130,7 +130,9 @@
           {% if config.extra.footer_cta.cta_url  %}
           <a class="border p-1" href="{{config.extra.footer_cta.cta_url}}">{{config.extra.footer_cta.cta_button}}</a>
           {% else %}
-          <a class="border p-1" href="{{sign_up_url}}">{{config.extra.footer_cta.cta_button}}</a>
+            {% if sign_up_url  %}
+            <a class="border p-1" href="{{sign_up_url}}">{{config.extra.footer_cta.cta_button}}</a>
+            {% endif %}
           {% endif %}
         </div>
         {% endif %}
