@@ -59,8 +59,6 @@
           <div class="bottom_bun"></div>
         </label><a href="/"><span>{{ config.title }}</span></a>
         <ul>
-          <li><a class="menu-item" href="/blog/">Blog</a></li>
-
           {% if config.extra.menu_items  %}
           {% for resource in config.extra.menu_items %}
           <li><a class="menu-item" href="{{ resource.url }}">{{ resource.name }}</a></li>
