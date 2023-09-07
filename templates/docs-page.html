@@ -2,7 +2,11 @@
 {% block class %} documentation {% endblock %}
 
 {% block content %}
-{% set current_section = "docs" %}
+{% if page.extra.section %}
+	{% set current_section = page.extra.section %}
+{% else %}
+	{% set current_section = "docs" %}
+{% endif %}
 <section class="l_documentation prose">
   <div>
     <aside>
