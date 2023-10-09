@@ -17,7 +17,7 @@
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
-  {% if config.extra.ga_analytics and config.base_url != "http://localhost:7400" %}
+  {% if config.extra.ga_analytics and config.extra.localhost and config.base_url != config.extra.localhost %}
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ config.extra.ga_analytics}}"></script>
   <script>
@@ -30,19 +30,18 @@
   {% endif %}
 </head>
 
-{% if config.extra.authentication and config.extra.localhost %}
-  {% if config.base_url == config.extra.localhost %}
-    {% set sign_up_url = config.extra.authentication_development.sign_up %}
-    {% set sign_in_url = config.extra.authentication_development.sign_in %}
-  {% else %}
-    {% set sign_up_url = config.extra.authentication.sign_up %}
-    {% set sign_in_url = config.extra.authentication.sign_in %}
-  {% endif %}
+{% if config.extra.authentication_development and config.extra.localhost and config.base_url == config.extra.localhost %}
+  {% set sign_up_url = config.extra.authentication_development.sign_up %}
+  {% set sign_in_url = config.extra.authentication_development.sign_in %}
 {% endif %}
 
+{% if config.extra.authentication and config.extra.localhost and config.base_url != config.extra.localhost %}
+  {% set sign_up_url = config.extra.authentication.sign_up %}
+  {% set sign_in_url = config.extra.authentication.sign_in %}
+{% endif %}
 
 <!-- https://www.goatcounter.com/ -->
-{% if config.extra.goat_counter %}
+{% if config.extra.goat_counter and config.extra.localhost and config.base_url != config.extra.localhost %}
 <body class="l_marketing" data-goatcounter="{{ config.extra.goat_counter}}">
 {% else %}
 <body class="l_marketing">
@@ -57,8 +56,6 @@
           <div class="bottom_bun"></div>
         </label><a href="/"><span>{{ config.title }}</span></a>
         <ul>
-          <li><a class="menu-item" href="/blog/">Blog</a></li>
-
           {% if config.extra.menu_items  %}
           {% for resource in config.extra.menu_items %}
           <li><a class="menu-item" href="{{ resource.url }}">{{ resource.name }}</a></li>
@@ -87,7 +84,7 @@
           {% endif %}
 
           <!-- {{ config.base_url}} -->
-          {% if config.extra.authentication and config.extra.localhost %}
+          {% if sign_up_url %}
           <li><a class="btn-mktg" href="{{ sign_up_url }}">Sign Up</a></li>
           <li><a class="menu-item" href="{{ sign_in_url }}">Sign In</a></li>
           {% endif %}
@@ -128,7 +125,9 @@
           {% if config.extra.footer_cta.cta_url  %}
           <a class="border p-1" href="{{config.extra.footer_cta.cta_url}}">{{config.extra.footer_cta.cta_button}}</a>
           {% else %}
-          <a class="border p-1" href="{{sign_up_url}}">{{config.extra.footer_cta.cta_button}}</a>
+            {% if sign_up_url  %}
+            <a class="border p-1" href="{{sign_up_url}}">{{config.extra.footer_cta.cta_button}}</a>
+            {% endif %}
           {% endif %}
         </div>
         {% endif %}
@@ -157,5 +156,4 @@
     </div>
   </footer>
 </body>
-
 </html>
