@@ -1,7 +1,6 @@
 +++
 title = "Injecting secrets into applications"
 weight = 30
-template = "docs-page.html"
 +++
 
 ## Overriding the css

@@ -1,7 +1,6 @@
 +++
 title = "Pricing Page"
 weight = 50
-template = "docs-page.html"
 +++
 
 

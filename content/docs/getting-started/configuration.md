@@ -1,7 +1,6 @@
 +++
 title = "Configuration"
 weight = 20
-template = "docs-page.html"
 +++
 
 The `[extra]` section of the `config.toml` files allows you to configure certains arts of the theme.

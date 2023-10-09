@@ -1,7 +1,6 @@
 +++
 title = "Landing Page"
 weight = 40
-template = "docs-page.html"
 +++
 
 ## Creating your own landing page
