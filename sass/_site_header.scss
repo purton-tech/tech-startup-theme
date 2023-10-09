@@ -1,0 +1,16 @@
+.site-header {
+    margin-bottom: 2rem;
+    height: 80px;
+    background-color: white;
+    border-bottom: 1px solid rgba(0,0,0,.07);
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    span {
+      font-weight: 600;
+      font-size: 1.5em;
+      color: black;
+    }
+}
