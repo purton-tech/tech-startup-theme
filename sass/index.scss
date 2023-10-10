@@ -10,5 +10,5 @@
 @use "header";
 @use "site_header";
 
-@use "syntax" as syntax;
-@include syntax.light;
+@use "syntax_charcoal" as syntax;
+@include syntax.dark;
