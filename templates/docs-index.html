@@ -16,22 +16,41 @@
       <meta name="description" content="{{ config.description }}" />
     {% endif %}
 
-      <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
 
-      {% block js %}
-      {% endblock js %}
+    {% block js %}
+    {% endblock js %}
 
-      <!-- CSS -->
-      {% block css %}
-      <link rel="stylesheet" 
-        href="/index.css?h={{get_hash(path="public/index.css", sha_type=256)}}">
-      {% endblock css %}
+    <!-- CSS -->
+    {% block css %}
+    <link rel="stylesheet" 
+    href="/index.css?h={{get_hash(path="public/index.css", sha_type=256)}}">
+    {% endblock css %}
 
-      {% block extra_head %}
-      {% endblock extra_head %}
+    {% block extra_head %}
+    {% endblock extra_head %}
+
+    {% if config.extra.ga_analytics and config.extra.localhost and config.base_url != config.extra.localhost %}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ config.extra.ga_analytics}}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '{{ config.extra.ga_analytics}}');
+    </script>
+    {% endif %}
+
+    <script async src="/primer-index.js?h={{get_hash(path="primer-index.js", sha_type=256)}}">
+    </script>
     </head>
 
+    {% if config.extra.goat_counter and config.extra.localhost and config.base_url != config.extra.localhost %}
+    <body data-goatcounter="{{ config.extra.goat_counter}}">
+    {% else %}
     <body>
+    {% endif %}
         <div class="menu">
             <a href="/" class="site-header"><span>{{ config.title }}</span></a>
             {% block before_menu %}
