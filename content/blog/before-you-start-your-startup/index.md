@@ -7,6 +7,7 @@ main_image = "blog/before-you-start-your-startup/diagram.webp"
 listing_image = "blog/before-you-start-your-startup/diagram.webp"
 author_image = "ian-purton.jpeg"
 author = "Ian Purton"
+description = "A brief description"
 +++
 
 ## Introduction:

@@ -17,6 +17,9 @@
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
+  {% block extra_head %}
+  {% endblock extra_head %}
+
   {% if config.extra.ga_analytics and config.extra.localhost and config.base_url != config.extra.localhost %}
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ config.extra.ga_analytics}}"></script>

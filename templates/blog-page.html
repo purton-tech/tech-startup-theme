@@ -1,6 +1,18 @@
 {% extends "base.html" %}
 {% block class %} blog {% endblock %}
 
+{% block extra_head %}
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{ page.title }}" />
+{% if page.extra.description %}
+<meta property="og:description" content="{{page.extra.description}}" />
+{% endif %}
+{% if page.extra.main_image %}
+{% set main_image = resize_image(path=page.extra.main_image, width=768, height=487, op="fill") %}
+<meta property="og:image" content="{{ main_image.url }}" />
+{% endif %}
+{% endblock extra_head %}
+
 {% block content %}
 <section class="markdown-body blog-content">
   <div>
@@ -23,8 +35,8 @@
     {% endif %}
 
     {% if page.extra.main_image %}
-    {% set image = resize_image(path=page.extra.main_image, width=768, height=487, op="fill") %}
-    <img width="768" height="487" src="{{ image.url }}" />
+    {% set main_image = resize_image(path=page.extra.main_image, width=768, height=487, op="fill") %}
+    <img width="768" height="487" src="{{ main_image.url }}" />
     {% endif %}
 
     <article class="prose">
