@@ -12,6 +12,17 @@
 @import '@primer/css/markdown/index.scss';
 @import '@primer/css/layout/index.scss';
 
+.markdown-body {// Headings
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        border-bottom: none;
+    }
+}
+
 // https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 *, *:before, *:after {
     box-sizing: inherit;

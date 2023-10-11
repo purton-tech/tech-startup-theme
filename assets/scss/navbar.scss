@@ -8,14 +8,14 @@ div.m_navbar {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  box-shadow: var(--shadow-small);
+  border-bottom: 1px solid rgba(0,0,0,.07);
 
   nav {
     width: var(--content-width);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: 50px;
     margin: 0;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
