@@ -5,6 +5,8 @@ date = 2022-09-19
 [extra]
 main_image = "blog/before-you-start-your-startup/diagram.webp"
 listing_image = "blog/before-you-start-your-startup/diagram.webp"
+author_image = "ian-purton.jpeg"
+author = "Ian Purton"
 +++
 
 ## Introduction:
