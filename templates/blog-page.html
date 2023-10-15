@@ -6,6 +6,7 @@
 <meta property="og:title" content="{{ page.title }}" />
 {% if page.extra.description %}
 <meta property="og:description" content="{{page.extra.description}}" />
+<meta name="description" content="{{page.extra.description}}">
 {% endif %}
 {% if page.extra.main_image %}
 {% set main_image = resize_image(path=page.extra.main_image, width=768, height=487, op="fill") %}
