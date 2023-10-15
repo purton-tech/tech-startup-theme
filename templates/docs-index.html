@@ -53,7 +53,7 @@
     {% else %}
     <body>
     {% endif %}
-        <div class="menu">
+        <div class="menu" id="sidebar">
             <a href="/" class="site-header"><span>{{ config.title }}</span></a>
             {% block before_menu %}
             {% endblock before_menu %}
@@ -86,6 +86,29 @@
                     {% endblock menu %}
                 </ul>
             </nav>
+
+            <!-- Track and set sidebar scroll position -->
+            <script>
+                var sidebarScrollbox = document.querySelector('#sidebar');
+                sidebarScrollbox.addEventListener('click', function(e) {
+                    if (e.target.tagName === 'A') {
+                        sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                    }
+                }, { passive: true });
+                var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+                sessionStorage.removeItem('sidebar-scroll');
+                if (sidebarScrollTop) {
+                    // preserve sidebar scroll position when navigating via links within sidebar
+                    sidebarScrollbox.scrollTop = sidebarScrollTop;
+                } else {
+                    // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                    var activeSection = document.querySelector('#sidebar .active');
+                    if (activeSection) {
+                        activeSection.scrollIntoView({ block: 'center' });
+                    }
+                }
+            </script>
+
             {% block after_menu %}
             {% endblock after_menu %}
         </div>

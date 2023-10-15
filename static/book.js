@@ -2,10 +2,35 @@ function initToggleMenu() {
     var $menu = document.querySelector(".menu");
     var $menuIcon = document.querySelector(".menu-icon");
     var $page = document.querySelector(".page");
+
     $menuIcon.addEventListener("click", function() {
       $menu.classList.toggle("menu-hidden");
       $page.classList.toggle("page-without-menu");
+
+      if($menu.classList.contains('menu-hidden')) {
+        console.log('heddeb')
+        localStorage.setItem('mdbook-sidebar', 'hidden')
+      } else {
+        localStorage.setItem('mdbook-sidebar', 'visible')
+        console.log('visible')
+      }
     });
+
+    $menu.classList.remove("menu-hidden");
+    $page.classList.remove("page-without-menu");
+
+    if (document.body.clientWidth >= 1080) {
+        try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+        sidebar = sidebar || 'visible';
+
+        if(sidebar != 'visible') {
+          $menu.classList.add("menu-hidden");
+          $page.classList.add("page-without-menu");
+        } 
+    } else {
+      $menu.classList.add("menu-hidden");
+      $page.classList.add("page-without-menu");
+    }
   }
   
   function debounce(func, wait) {
