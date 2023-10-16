@@ -1,6 +1,18 @@
 {% extends "base.html" %}
 {% block class %} blog {% endblock %}
 
+{% block seo %}
+  {{ super() }}
+
+  {% set title = 'The Company Blog' %}
+  {% set description = 'Our thoughts and opinions' %}
+  
+  {{ macros_head::seo(
+    title=title, 
+    description=description
+  ) }}
+{% endblock seo %}
+
 {% block content %}
 <section class="content d-flex flex-content-center flex-column text-center">
   <h1 class="h3-mktg mb-4 pt-9">{{ config.extra.blog_title | default(value='The Blog') }}</h1>

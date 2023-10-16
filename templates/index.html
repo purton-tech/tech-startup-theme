@@ -1,5 +1,17 @@
 {% extends "base.html" %}
 
+{% block seo %}
+  {{ super() }}
+
+  {% set title = 'This is the home page' %}
+  {% set description = 'Dscribe what your service does' %}
+  
+  {{ macros_head::seo(
+    title=title, 
+    description=description
+  ) }}
+{% endblock seo %}
+
 {% block content %}
 <section class="col-10 mx-auto content d-flex flex-content-center flex-column text-center">
   <h1 class="h3-mktg mb-4 pt-9">A Zola Theme to kick off your Startup</h1>

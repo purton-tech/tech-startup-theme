@@ -1,5 +1,17 @@
 {% extends "base.html" %}
 
+{% block seo %}
+  {{ super() }}
+
+  {% set title = 'The pricing page' %}
+  {% set description = 'Show how much we charge' %}
+  
+  {{ macros_head::seo(
+    title=title, 
+    description=description
+  ) }}
+{% endblock seo %}
+
 {% block content %}
 
 <section class="text-center">

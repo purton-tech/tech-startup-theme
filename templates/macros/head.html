@@ -1,0 +1,28 @@
+{# type:          website or article, generally setting article for blog articles #}
+{# page_images:   using for the blog single template page #}
+{# page_section:  the blog single template page have to pass the parameter #}
+{# is_404:        using for the 404.html template #}
+{% macro seo(
+  title="",
+  title_addition="",
+  description="",
+  type="website",
+  main_image_url=""
+  )
+%}
+
+<title>{{ title ~ title_addition }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ current_url | safe }}">
+
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:type" content="{{ type }}">
+<meta property="og:url" content="{{ current_url | safe }}">
+
+
+{% if main_image_url %}
+<meta property="og:image" content="{{ main_image_url }}" />
+{% endif %}
+
+{% endmacro %}

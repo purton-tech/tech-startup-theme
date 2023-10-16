@@ -1,3 +1,4 @@
+{%- import 'macros/head.html' as macros_head -%}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,17 +7,15 @@
 
       <!-- Enable responsiveness on mobile devices-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% if page %}
-      {% if page.description %}
-      <meta name="description" content="{{ page.description }}" />
-      {% elif config.description %}
-      <meta name="description" content="{{ config.description }}" />
-      {% endif %}
-    {% elif config.description %}
-      <meta name="description" content="{{ config.description }}" />
+      
+    
+    {% block seo %}
+    {% if config.extra.title_separator %}
+        {% set title_separator = " " ~ config.extra.title_separator ~ " " %}
+    {% else %}
+        {% set title_separator = " | " %}
     {% endif %}
-
-    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    {% endblock seo %}
 
     {% block js %}
     {% endblock js %}

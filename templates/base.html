@@ -1,13 +1,18 @@
+{%- import 'macros/head.html' as macros_head -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% if page.title %}
-  <title>{{ page.title }} | {{ config.title }}</title>
+
+  {% block seo %}
+  {% if config.extra.title_separator %}
+    {% set title_separator = " " ~ config.extra.title_separator ~ " " %}
   {% else %}
-  <title>{{ config.title }}</title>
+    {% set title_separator = " | " %}
   {% endif %}
+  {% endblock seo %}
+  
   <link rel="stylesheet" 
     href="/primer-index.css?h={{get_hash(path="primer-index.css", sha_type=256)}}">
   <link rel="stylesheet" 
@@ -16,9 +21,6 @@
     src="/primer-index.js?h={{get_hash(path="primer-index.js", sha_type=256)}}"></script>
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-
-  {% block extra_head %}
-  {% endblock extra_head %}
 
   {% if config.extra.ga_analytics and config.extra.localhost and config.base_url != config.extra.localhost %}
   <!-- Google tag (gtag.js) -->
