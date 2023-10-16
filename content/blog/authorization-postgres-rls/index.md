@@ -1,9 +1,9 @@
 +++
 title = "Implementing Authorization with Postgres Row Level Security (RLS)"
 date = 2022-09-19
+description="A description"
 
 [extra]
-description="A description"
 main_image = "blog-background.jpeg"
 listing_image = "blog/before-you-start-your-startup/satellites-negotiating.png"
 +++
