@@ -4,7 +4,7 @@ date = 2022-09-19
 description="A description"
 
 [extra]
-main_image = "blog-background.jpeg"
+main_image = "blog/before-you-start-your-startup/satellites-negotiating.png"
 listing_image = "blog/before-you-start-your-startup/satellites-negotiating.png"
 +++
 

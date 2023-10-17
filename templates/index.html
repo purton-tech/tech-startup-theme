@@ -13,50 +13,52 @@
 {% endblock seo %}
 
 {% block content %}
-<section class="col-10 mx-auto content d-flex flex-content-center flex-column text-center">
-  <h1 class="h3-mktg mb-4 pt-9">A Zola Theme to kick off your Startup</h1>
-  <h2 class="h6-mktg color-fg-muted mb-4">Save time and focus on your product, let the Tech Startup theme handle
+<section class="lg:max-w-5xl mx-auto text-center">
+  <h1>A Zola Theme to kick off your Startup</h1>
+  <h2>Save time and focus on your product, let the Tech Startup theme handle
     marketing.</h2>
-  <div class="mb-4">
-    <a class="btn-mktg mr-1" href="{{ sign_up_url }}">Sign Up</a>
-    <a class="btn-mktg btn-muted-mktg ml-1" target="_blank" href="https://youtu.be/mmBNxNV9Qts">Watch 4 minute Demo</a>
+  <div>
+    <a href="{{ sign_up_url }}">Sign Up</a>
+    <a target="_blank" href="https://youtu.be/mmBNxNV9Qts">Watch 4 minute Demo</a>
   </div>
-  <div class="border-left border-right">
-    <a class="you-tube" target="_blank" href="https://youtu.be/mmBNxNV9Qts">
-      <img class="mr-3" width="100%" alt="Airbus Logo" src="/landing-page/dashboard.png"></img>
-      <div class="play-button d-none d-lg-block"></div>
+  <div>
+    <a target="_blank" href="https://youtu.be/mmBNxNV9Qts">
+      <img width="100%" alt="Airbus Logo" src="/landing-page/dashboard.png"></img>
+      <div></div>
     </a>
   </div>
 </section>
 
-<section class="text-center color-bg-accent-emphasis p-4">
-  <h3 class="color-fg-on-emphasis">Developed by The Digital Agency @ Airbus Innovations</h3>
-  <div class="d-flex flex-content-center flex-justify-center pt-4">
-    <img class="mr-3" width="200" alt="Airbus Logo" src="/landing-page/airbus-logo.svg"></img>
-  </div>
+<section class="bg-slate-100 text-center">
+  <h3>Developed by The Digital Agency @ Airbus Innovations</h3>
+  <p><img class="mx-auto" width="200" alt="Airbus Logo" src="/landing-page/airbus-logo.svg" /></p>
 </section>
 
-<section>
-  <div class="col-10 mx-auto content d-md-flex flex-row mt-6 mt-lg-12 pb-6">
-    <div class="col-md-6 pr-4">
-      <h2 class="h5-mktg mb-6">The full development lifecycle</h2>
-      <h4 class="h6-mktg color-fg-muted mb-6">Everything you need to deploy a production startup. 
+<section class="lg:max-w-5xl mx-auto">
+  <div class="md:flex flex-row">
+    <div class="md:basis-1/2">
+      <h2>The full development lifecycle</h2>
+      <h4>Everything you need to deploy a production startup. 
         Including...</h4>
       <p>Managing the Database</p>
       <p>Infratructure as Code</p>
       <p>Ci/CD Pipelines</p>
       <p>Built on standards based best practices</p>
     </div>
-    <img class="col-md-6 ml-lg-4 color-shadow-large" alt="Cream" src="/landing-page/documentation-screenshot.png"></img>
+    <div class="md:basis-1/2">
+      <img alt="Cream" src="/landing-page/documentation-screenshot.png"></img>
+    </div>
   </div>
 </section>
 
-<section>
-  <div class="content d-flex flex-column-reverse flex-lg-row pt-lg-6 pb-6">
-    <img class="col-md-6 mr-lg-4 color-shadow-large" alt="Cream" src="/landing-page/cloak-screenshot.png"></img>
-    <div class="col-md-6 pl-lg-4">
-      <h2 class="h5-mktg mt-4 mt-lg-0 mb-6">Create Great Looking Applications</h2>
-      <h4 class="h6-mktg color-fg-muted mb-6">
+<section class="lg:max-w-5xl mx-auto">
+  <div class="md:flex flex-row">
+    <div class="md:basis-1/2">
+    <img alt="Cream" src="/landing-page/cloak-screenshot.png"></img>
+    </div>
+    <div class="md:basis-1/2">
+      <h2>Create Great Looking Applications</h2>
+      <h4>
         Fully responsive server side rendered applications.
       </h4>
       <p>Pages rendered on the backend in Rust</p>
@@ -65,42 +67,34 @@
   </div>
 </section>
 
-<section>
-  <div class="content d-md-flex flex-row pt-6 pb-12">
-    <div class="col-md-6 pr-4">
-      <h2 class="h5-mktg mb-6">All documentation is generated from markdown files</h2>
-      <h4 class="h6-mktg color-fg-muted mb-6">
+<section class="lg:max-w-5xl mx-auto">
+  <div class="md:flex flex-row">
+    <div class="md:basis-1/2">
+      <h2>All documentation is generated from markdown files</h2>
+      <h4>
         We walk you through best practices for scaling and operating products.
       </h4>
       <p>Deploying to Kubernetes</p>
       <p>How to incorporate open telemetry (coming soon)</p>
     </div>
-    <img class="col-md-6 ml-lg-4 color-shadow-large" alt="Cream" src="/landing-page/documentation-screenshot.png"></img>
+    <div class="md:basis-1/2">
+      <img class="" alt="Documentation" src="/landing-page/documentation-screenshot.png"></img>
+    </div>
   </div>
 </section>
 
-<section>
+<section class="lg:max-w-5xl mx-auto">
   <h2>Features</h2>
-  <div>
-    <div>
+  <div class="md:flex flex-row">
+    <div class="md:basis-1/2">
       <h4>Super fast page loads</h4>
       <p>Most of our pages come in a just a few kb's</p>
       <p>This means fast page loads and better SEO.</p>
     </div>
-    <div>
+    <div class="md:basis-1/2">
       <h4>Configurable</h4>
       <p>All colours are configurable with CSS variables.</p>
       <p>The landing pahe is HTML and can be built exactly how you want it.</p>
-    </div>
-    <div>
-      <h4>Blog built with Markdown</h4>
-      <p>Create pages quickly and add them to your git workflow.</p>
-      <p>A blog is essential in the modern day to attract a constant stream of traffic.</p>
-    </div>
-    <div>
-      <h4>Pre-populated privacy and terms</h4>
-      <p>No one reads them anyway so why waste time. Use our preconfigured pages.</p>
-      <p>You can set the product name and configure the product real world address. </p>
     </div>
   </div>
 </section>

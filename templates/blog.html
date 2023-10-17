@@ -14,16 +14,16 @@
 {% endblock seo %}
 
 {% block content %}
-<section class="content d-flex flex-content-center flex-column text-center">
-  <h1 class="h3-mktg mb-4 pt-9">{{ config.extra.blog_title | default(value='The Blog') }}</h1>
-  <h2 class="h6-mktg color-fg-muted mb-4">{{ config.extra.blog_subtitle | default(value='Ideas, Updates and Inspiration') }}</h2>
+<section class="lg:max-w-5xl mx-auto">
+  <h1>{{ config.extra.blog_title | default(value='The Blog') }}</h1>
+  <h2>{{ config.extra.blog_subtitle | default(value='Ideas, Updates and Inspiration') }}</h2>
 </section>
-<section class="l_blog_list">
+<section class="lg:max-w-5xl mx-auto">
   <div>
-    <div class="cards">
+    <div class="grid grid-cols-2 gap-4">
       {% for page in section.pages %}
       {% if page.extra.listing_image %}
-      <div class="summary with-image">
+      <div>
         <div>
           {% set image = resize_image(path=page.extra.listing_image, width=198, height=198, op="fill") %}
           <img src="{{ image.url }}" />
@@ -35,7 +35,7 @@
         </div>
       </div>
       {% else %}
-      <div class="summary">
+      <div>
         <h3>{{ page.title }}</h3>
         <p class="subtitle"><strong>{{ page.date }}</strong></p>
         <p><a href="{{ page.path | safe }}">Read More...</a></p>

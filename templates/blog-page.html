@@ -31,9 +31,6 @@
     <h1>
       {{ page.title }}
     </h1>
-    {% if page.extra.subtitle %}
-    <h2>{{ page.extra.subtitle }}</h2>
-    {% endif %}
 
     {% if page.extra.author_image %}
     {% set image = resize_image(path=page.extra.author_image, width=44, height=44, op="fill") %}
