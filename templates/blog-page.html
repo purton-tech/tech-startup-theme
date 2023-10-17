@@ -26,20 +26,20 @@
 {% endblock seo %}
 
 {% block content %}
-<section class="markdown-body blog-content">
+<section class="flex justify-center">
   <div>
-    <h1 class="title pt-6">
+    <h1>
       {{ page.title }}
     </h1>
     {% if page.extra.subtitle %}
-    <h2 class="subtitle">{{ page.extra.subtitle }}</h2>
+    <h2>{{ page.extra.subtitle }}</h2>
     {% endif %}
 
     {% if page.extra.author_image %}
     {% set image = resize_image(path=page.extra.author_image, width=44, height=44, op="fill") %}
-    <div class="d-flex flex-row mb-4">
+    <div class="flex flex-row">
       <img width="44" height="44" src="{{ image.url }}" />
-      <div class="d-flex flex-column pl-2">
+      <div class="flex flex-column pl-2">
         <strong>{{ page.extra.author }}</strong>
         <small>{{ page.date | date(format="%b %d") }}</small>
       </div>
@@ -53,7 +53,7 @@
     <img width="768" height="487" src="{{ main_image.url }}" />
     {% endif %}
 
-    <article class="prose">
+    <article class="prose lg:prose-xl">
       {{ page.content | safe }}
     </article>
   </div>

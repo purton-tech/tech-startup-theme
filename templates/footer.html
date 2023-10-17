@@ -1,0 +1,58 @@
+<footer class="bg-black text-white p-5">
+    <div class="flex flex-row justify-between lg:max-w-5xl mx-auto pb-5">
+        <div>
+            <h5>Resources</h5>
+            <ul>
+                {% if config.extra.resources_1 %}
+                {% for resource in config.extra.resources_1 %}
+                <li><a href="{{ resource.url }}">{{ resource.name }}</a></li>
+                {% endfor %}
+                {% endif %}
+            </ul>
+        </div>
+        <div>
+            <h5>Resources</h5>
+            <ul>
+                {% if config.extra.resources_2 %}
+                {% for resource in config.extra.resources_2 %}
+                <li><a href="{{ resource.url }}">{{ resource.name }}</a></li>
+                {% endfor %}
+                {% endif %}
+            </ul>
+        </div>
+        {% if config.extra.footer_cta %}
+        <div>
+            <h5>{{config.extra.footer_cta.title}}</h5>
+            <p>{{config.extra.footer_cta.prompt}}</p>
+            {% if config.extra.footer_cta.cta_url %}
+            <a class="border p-1" href="{{config.extra.footer_cta.cta_url}}">{{config.extra.footer_cta.cta_button}}</a>
+            {% else %}
+            {% if sign_up_url %}
+            <a class="border p-1" href="{{sign_up_url}}">{{config.extra.footer_cta.cta_button}}</a>
+            {% endif %}
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+    <hr />
+    <div class="flex flex-row justify-between lg:max-w-5xl mx-auto pt-5">
+        {% if config.extra.copyright %}
+        <p>{{config.extra.copyright}}</p>
+        {% endif %}
+        <ul class="flex flex-row gap-4">
+            {% if config.extra.twitter %}
+            <li><a href="{{config.extra.twitter}}"><img width="24" alt="Twitter" src="/footer/twitter.svg" /></a></li>
+            {% endif %}
+            {% if config.extra.github_repo %}
+            <li><a href="{{config.extra.github_repo}}"><img width="24" alt="Github" src="/footer/github.svg" /></a></li>
+            {% endif %}
+            {% if config.extra.linkedin %}
+            <li><a href="{{config.extra.linkedin}}"><img width="24" alt="LinkedIn" src="/footer/linkedin.svg" /></a></li>
+            {% endif %}
+        </ul>
+        <ul class="flex flex-row gap-4">
+            <li><a href="/pages/terms">Terms</a></li>
+            <li><a href="/pages/privacy">Privacy</a></li>
+        </ul>
+    </div>
+</footer>
