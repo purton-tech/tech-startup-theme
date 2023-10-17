@@ -2,45 +2,43 @@
 {% block class %} blog {% endblock %}
 
 {% block seo %}
-  {{ super() }}
+{{ super() }}
 
-  {% if page.extra.main_image %}
-    {% set main_image = resize_image(path=page.extra.main_image, width=768, height=487, op="fill") %}
-    {% set main_image = main_image.url %}
-  {% else %}
-    {% set main_image = '' %}
-  {% endif %}
+{% if page.extra.main_image %}
+{% set main_image = resize_image(path=page.extra.main_image, width=768, height=487, op="fill") %}
+{% set main_image = main_image.url %}
+{% else %}
+{% set main_image = '' %}
+{% endif %}
 
-  {% if page.description %}
-    {% set description = page.description %}
-  {% else %}
-    {% set description = '' %}
-  {% endif %}
+{% if page.description %}
+{% set description = page.description %}
+{% else %}
+{% set description = '' %}
+{% endif %}
 
-  {{ macros_head::seo(
-    title=page.title, 
-    type='article',
-    description=description,
-    main_image_url=main_image
-  ) }}
+{{ macros_head::seo(
+title=page.title,
+type='article',
+description=description,
+main_image_url=main_image
+) }}
 {% endblock seo %}
 
 {% block content %}
-<section class="flex justify-center">
-  <div>
-    <div>
-      <h1 class="text-4xl font-extrabold">
-        {{ page.title }}
-      </h1>
-    </div>
+
+  <article class="mx-auto prose lg:prose-xl">
+    <h1>
+      {{ page.title }}
+    </h1>
 
     {% if page.extra.author_image %}
     {% set image = resize_image(path=page.extra.author_image, width=44, height=44, op="fill") %}
-    <div class="flex flex-row mt-8 mb-4">
+    <div class="not-prose flex flex-row mt-8 mb-4">
       <img width="44" height="44" src="{{ image.url }}" />
-      <div class="flex flex-col pl-2">
-        <strong>{{ page.extra.author }}</strong>
-        <small>{{ page.date | date(format="%b %d") }}</small>
+      <div class="not-prose flex flex-col pl-2">
+        <strong class="text-base">{{ page.extra.author }}</strong>
+        <small class="text-base">{{ page.date | date(format="%b %d") }}</small>
       </div>
     </div>
     {% endif %}
@@ -51,13 +49,8 @@
     {% set main_image = resize_image(path=page.extra.main_image, width=768, height=487, op="fill") %}
     <img class="mb-8" width="768" height="487" src="{{ main_image.url }}" />
     {% endif %}
-
-    <article class="prose lg:prose-xl">
-      {{ page.content | safe }}
-    </article>
-  </div>
-</section>
-
+    {{ page.content | safe }}
+  </article>
 {% include "extra_footer.html" %}
 
 {% endblock content %}
