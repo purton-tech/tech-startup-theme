@@ -1,13 +1,13 @@
 <header>
     <div class="m_navbar {% block class %}{% endblock %}">
         <nav class="flex flex-row justify-between p-4 border-b">
-            <input id="toggle" type="checkbox" />
-            <label class="hamburger" for="toggle">
+            <input class="hidden" id="toggle" type="checkbox" />
+            <label class="md:hidden hamburger" for="toggle">
                 <div class="top_bun"></div>
                 <div class="meat"></div>
                 <div class="bottom_bun"></div>
             </label><a href="/"><span>{{ config.title }}</span></a>
-            <ul>
+            <ul class="md:flex md:gap-4 hidden md:visible">
                 {% if config.extra.menu_items %}
                 {% for resource in config.extra.menu_items %}
                 <li><a class="menu-item" href="{{ resource.url }}">{{ resource.name }}</a></li>
