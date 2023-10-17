@@ -3,22 +3,8 @@
 /* Responsive navigation no js */
 div.m_navbar {
   z-index: 1000;
-  width: 100%;
-  background-color: var(--background);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  border-bottom: 1px solid rgba(0,0,0,.07);
 
   nav {
-    width: var(--content-width);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px;
-    margin: 0;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
 
     // The checkbox
     > input {
@@ -34,26 +20,6 @@ div.m_navbar {
     > ul {
       display: none;
       list-style: none;
-    }
-
-    .menu-item {
-      text-transform: uppercase;
-      text-decoration: none;
-      font-weight: 400;
-      color: black;
-      line-height: 1.25rem;
-      padding: 0;
-    }
-
-    // Make the logo a bit nicer.
-    > a {
-      text-decoration: none;
-      text-transform: uppercase;
-      span {
-        font-weight: 600;
-        font-size: 1.5em;
-        color: black;
-      }
     }
 
     .hamburger {
