@@ -1,11 +1,10 @@
-{% if config.extra.footer_cta %}
-<section class="color-bg-subtle d-flex flex-content-center flex-column pb-8 pt-8 mt-8 text-center">
-  <h3 class="mb-3">{{config.extra.every_page_cta.title}}</h3>
-  {% if config.extra.every_page_cta.cta_url %}
-  <p><a class="btn-mktg"
-      href="{{config.extra.every_page_cta.cta_url}}">{{config.extra.every_page_cta.cta_button}}</a></p>
-  {% else %}
-  <p><a class="btn-mktg" href="{{sign_up_url}}">{{config.extra.every_page_cta.cta_button}}</a></p>
-  {% endif %}
-</section>
-{% endif %}
+{%- import 'macros/cta.html' as macros_cta -%}
+
+
+<div class="flex flex-col items-center mb-6">
+{{ macros_cta::footer_cta(
+  title="You're seconds away from trying us out", 
+  cta1='Read the Documentation',
+  cta1_url='/docs'
+) }}
+</div>

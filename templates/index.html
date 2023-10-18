@@ -1,5 +1,6 @@
 {%- import 'macros/heros.html' as macros_hero -%}
 {%- import 'macros/features.html' as macros_features -%}
+{%- import 'macros/cta.html' as macros_cta -%}
 
 {% extends "base.html" %}
 
@@ -64,15 +65,6 @@
   ) }}
 </div>
 
-{% if config.extra.footer_cta %}
-<section class="d-flex flex-content-center flex-column mt-8 mb-8 text-center pl-1 pr-1">
-  <h3 class="mb-3">{{config.extra.every_page_cta.title}}</h3>
-  {% if config.extra.every_page_cta.cta_url %}
-  <p><a class="btn-mktg"
-      href="{{config.extra.every_page_cta.cta_url}}">{{config.extra.every_page_cta.cta_button}}</a></p>
-  {% else %}
-  <p><a class="btn-mktg" href="{{sign_up_url}}">{{config.extra.every_page_cta.cta_button}}</a></p>
-  {% endif %}
-</section>
-{% endif %}
+{% include "extra_footer.html" %}
+
 {% endblock content %}

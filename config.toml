@@ -21,12 +21,6 @@ highlight_themes_css = [
 [extra]
 copyright = "Copyright 2021 - "
 
-# Every page CTA. At the bottom of every blog post we have a cta
-every_page_cta = { title = "You're 30 seconds away from trying us out", cta_url = "/blog", cta_button = "Sign Up" }
-
-# On the footer we have a signup button and a call to action, set the text here
-footer_cta = { title = "Sign up for our service", prompt = "Footer prompt.", cta_url = "/blog", cta_button = "Check it Out" }
-
 # Where shall we point the sign in and sign up buttons.
 authentication = { sign_up = "/blog", sign_in = "/blog" }
 # When running on localhost you can set the sign up and sign links to somewhere else.
