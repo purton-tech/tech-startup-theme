@@ -37,7 +37,8 @@
     <hr />
     <div class="flex flex-row justify-between lg:max-w-5xl mx-auto pt-5">
         {% if config.extra.copyright %}
-        <p>{{config.extra.copyright}}</p>
+        {% set curr_time = now()|date(format="%Y") %}
+        <p>{{config.extra.copyright}} {{curr_time}}</p>
         {% endif %}
         <ul class="flex flex-row gap-4">
             {% if config.extra.twitter %}

@@ -13,7 +13,7 @@
 {% endblock seo %}
 
 {% block content %}
-<section class="lg:max-w-5xl mx-auto text-center">
+<section class="lg:max-w-5xl mx-auto text-center p-4">
   <h1>A Zola Theme to kick off your Startup</h1>
   <h2>Save time and focus on your product, let the Tech Startup theme handle
     marketing.</h2>
@@ -34,8 +34,8 @@
   <p><img class="mx-auto" width="200" alt="Airbus Logo" src="/landing-page/airbus-logo.svg" /></p>
 </section>
 
-<section class="lg:max-w-5xl mx-auto">
-  <div class="md:flex flex-row">
+<section class="lg:max-w-5xl p-4 mx-auto mt-12 text-center lg:text-left bg-slate-100 lg:bg-white">
+  <div class="md:flex flex-row gap-4">
     <div class="md:basis-1/2">
       <h2>The full development lifecycle</h2>
       <h4>Everything you need to deploy a production startup. 
@@ -51,11 +51,8 @@
   </div>
 </section>
 
-<section class="lg:max-w-5xl mx-auto">
-  <div class="md:flex flex-row">
-    <div class="md:basis-1/2">
-    <img alt="Cream" src="/landing-page/cloak-screenshot.png"></img>
-    </div>
+<section class="lg:max-w-5xl p-4 mx-auto mt-12">
+  <div class="md:flex flex-row gap-4 flex-row-reverse">
     <div class="md:basis-1/2">
       <h2>Create Great Looking Applications</h2>
       <h4>
@@ -64,11 +61,14 @@
       <p>Pages rendered on the backend in Rust</p>
       <p>Made responsive with the islands architecture</p>
     </div>
+    <div class="md:basis-1/2">
+    <img alt="Cream" src="/landing-page/cloak-screenshot.png"></img>
+    </div>
   </div>
 </section>
 
-<section class="lg:max-w-5xl mx-auto">
-  <div class="md:flex flex-row">
+<section class="lg:max-w-5xl p-4 mx-auto mt-12">
+  <div class="md:flex flex-row gap-4">
     <div class="md:basis-1/2">
       <h2>All documentation is generated from markdown files</h2>
       <h4>
@@ -83,9 +83,9 @@
   </div>
 </section>
 
-<section class="lg:max-w-5xl mx-auto">
+<section class="lg:max-w-5xl p-4 mx-auto mt-12">
   <h2>Features</h2>
-  <div class="md:flex flex-row">
+  <div class="md:flex flex-row gap-4">
     <div class="md:basis-1/2">
       <h4>Super fast page loads</h4>
       <p>Most of our pages come in a just a few kb's</p>

@@ -19,7 +19,7 @@ highlight_themes_css = [
 ]
 
 [extra]
-copyright = "Copyright 2021 - 2022"
+copyright = "Copyright 2021 - "
 
 # Every page CTA. At the bottom of every blog post we have a cta
 every_page_cta = { title = "You're 30 seconds away from trying us out", cta_url = "/blog", cta_button = "Sign Up" }
