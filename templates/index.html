@@ -1,3 +1,6 @@
+{%- import 'macros/heros.html' as macros_hero -%}
+{%- import 'macros/features.html' as macros_features -%}
+
 {% extends "base.html" %}
 
 {% block seo %}
@@ -13,26 +16,47 @@
 {% endblock seo %}
 
 {% block content %}
-<section class="lg:max-w-5xl flex flex-col items-center text-center p-4">
-  <h1 class="mt-4 max-w-[36rem] text-4xl font-extrabold tracking-tight text-slate-900 sm:text-4xl xl:max-w-[43.5rem]">
-    A full Enterprise Grade LLM stack that deploys in minutes on your laptop and scales to the data center
-  </h1>
-  <h2 class="mt-4 max-w-lg text-lg text-slate-700">
-    Beautifully designed, expertly crafted components and templates, 
-    built by the makers of Tailwind CSS. The perfect starting point for your next project.
-  </h2>
-  <div>
-    <a target="_blank" href="https://youtu.be/mmBNxNV9Qts">
-      <img width="100%" alt="Airbus Logo" src="/landing-page/dashboard.png"></img>
-      <div></div>
-    </a>
-  </div>
-</section>
+
+{{ macros_hero::image_hero(
+  title='A full Enterprise Grade Open Source LLM stack that 
+    deploys in minutes on your laptop and scales to the cloud', 
+  sub_title='Beautifully designed, expertly crafted components and templates, 
+    built by the makers of Tailwind CSS. The perfect starting point for your next project.'
+) }}
 
 <section class="bg-slate-100 text-center">
   <h3>Developed by The Digital Agency @ Airbus Innovations</h3>
   <p><img class="mx-auto" width="200" alt="Airbus Logo" src="/landing-page/airbus-logo.svg" /></p>
 </section>
+
+
+
+{{ macros_features::image_feature(
+  title='Team based Chat', 
+  sub_title='A better workflow',
+  text='Some text',
+  title1='Prompt Engineering.',
+  text1='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+  title2='Retreival Augmented Generation.',
+  text2='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+  title3="API's.",
+  text3='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+  image='/landing-page/documentation-screenshot.png'
+) }}
+
+{{ macros_features::quad_feature(
+  title='Deploy one of our models or integrate with any provider', 
+  sub_title='On Prem or managed models',
+  text='Some text',
+  title1='Open Source Quantized Models.',
+  text1='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+  title2='Connect to Azure, Google, Amazon and more',
+  text2='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+  title3="Secure Cloud.",
+  text3='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+  title4="Public Cloud.",
+  text4='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.'
+) }}
 
 <section class="lg:max-w-5xl p-4 mx-auto mt-12 text-center lg:text-left bg-slate-100 lg:bg-white">
   <div class="md:flex flex-row gap-4">
