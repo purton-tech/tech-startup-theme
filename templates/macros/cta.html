@@ -1,19 +1,43 @@
 {% macro footer_cta(
-    title="",
-    cta1="",
-    cta1_url=""
-    )
-    %}
-    
-    <section class="lg:max-w-5xl flex flex-col items-center text-center p-4">
-        <h2 class="mt-4 max-w-lg text-lg text-slate-700">
-            {{ title }}
-        </h2>
-        <div class="mt-4 flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
-            <a href="{{cta1_url}}" class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-center text-white bg-indigo-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                {{cta1}}
-            </a>
-        </div>
-    </section>
-    
-    {% endmacro %}
+title="",
+cta1="",
+cta1_url=""
+)
+%}
+
+<section class="lg:max-w-5xl flex flex-col items-center text-center p-4">
+    <h2 class="mt-4 max-w-lg text-lg text-slate-700">
+        {{ title }}
+    </h2>
+    <div class="mt-4 flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+        <a href="{{cta1_url}}"
+            class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-center text-white bg-indigo-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+            {{cta1}}
+        </a>
+    </div>
+</section>
+
+{% endmacro %}
+
+{% macro footer_cta_pic(
+title="",
+cta1="",
+cta1_url="",
+image=""
+)
+%}
+
+<section class="flex flex-col items-center text-center p-4 bg-slate-200">
+    <h2 class="mt-4 mb-4 max-w-lg text-lg text-slate-700">
+        {{ title }}
+    </h2>
+    <img src="{{image}}" alt="Product screenshot" class="lg:max-w-md">
+    <div class="mt-4 flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
+        <a href="{{cta1_url}}"
+            class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-center text-white bg-indigo-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+            {{cta1}}
+        </a>
+    </div>
+</section>
+
+{% endmacro %}

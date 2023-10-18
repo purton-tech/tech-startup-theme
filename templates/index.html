@@ -65,6 +65,13 @@
   ) }}
 </div>
 
-{% include "extra_footer.html" %}
+<div class="">
+{{ macros_cta::footer_cta_pic(
+  title="You're seconds away from trying us out", 
+  cta1='Read the Documentation',
+  cta1_url='/docs',
+  image='/landing-page/cloak-screenshot.png'
+) }}
+</div>
 
 {% endblock content %}
