@@ -19,4 +19,4 @@ alias nrs='npm run start'
 alias db='psql $DATABASE_URL'
 
 alias zs='zola serve --interface 0.0.0.0'
-alias wt='npx tailwindcss -i ./input.css -o ./public/tailwind.css --watch'
+alias wt='npx tailwindcss -i ./input.css -o ./static/tailwind.css --watch'
