@@ -16,112 +16,49 @@
 {% endblock seo %}
 
 {% block content %}
+<div class="flex flex-col items-center">
 
-{{ macros_hero::image_hero(
-  title='A full Enterprise Grade Open Source LLM stack that 
-    deploys in minutes on your laptop and scales to the cloud', 
-  sub_title='Beautifully designed, expertly crafted components and templates, 
-    built by the makers of Tailwind CSS. The perfect starting point for your next project.'
-) }}
+  {{ macros_hero::image_hero(
+    title='A full Enterprise Grade Open Source LLM stack that 
+      deploys in minutes on your laptop and scales to the cloud', 
+    sub_title='Beautifully designed, expertly crafted components and templates, 
+      built by the makers of Tailwind CSS. The perfect starting point for your next project.'
+  ) }}
 
-<section class="bg-slate-100 text-center">
-  <h3>Developed by The Digital Agency @ Airbus Innovations</h3>
-  <p><img class="mx-auto" width="200" alt="Airbus Logo" src="/landing-page/airbus-logo.svg" /></p>
-</section>
+  <section class="bg-slate-100 text-center">
+    <h3>Developed by The Digital Agency @ Airbus Innovations</h3>
+    <p><img class="mx-auto" width="200" alt="Airbus Logo" src="/landing-page/airbus-logo.svg" /></p>
+  </section>
 
 
 
-{{ macros_features::image_feature(
-  title='Team based Chat', 
-  sub_title='A better workflow',
-  text='Some text',
-  title1='Prompt Engineering.',
-  text1='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-  title2='Retreival Augmented Generation.',
-  text2='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-  title3="API's.",
-  text3='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-  image='/landing-page/documentation-screenshot.png'
-) }}
+  {{ macros_features::image_feature(
+    title='Team based Chat', 
+    sub_title='A better workflow',
+    text='Some text',
+    title1='Prompt Engineering.',
+    text1='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    title2='Retreival Augmented Generation.',
+    text2='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    title3="API's.",
+    text3='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    image='/landing-page/documentation-screenshot.png'
+  ) }}
 
-{{ macros_features::quad_feature(
-  title='Deploy one of our models or integrate with any provider', 
-  sub_title='On Prem or managed models',
-  text='Some text',
-  title1='Open Source Quantized Models.',
-  text1='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-  title2='Connect to Azure, Google, Amazon and more',
-  text2='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-  title3="Secure Cloud.",
-  text3='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-  title4="Public Cloud.",
-  text4='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.'
-) }}
-
-<section class="lg:max-w-5xl p-4 mx-auto mt-12 text-center lg:text-left bg-slate-100 lg:bg-white">
-  <div class="md:flex flex-row gap-4">
-    <div class="md:basis-1/2">
-      <h2>The full development lifecycle</h2>
-      <h4>Everything you need to deploy a production startup. 
-        Including...</h4>
-      <p>Managing the Database</p>
-      <p>Infratructure as Code</p>
-      <p>Ci/CD Pipelines</p>
-      <p>Built on standards based best practices</p>
-    </div>
-    <div class="md:basis-1/2">
-      <img alt="Cream" src="/landing-page/documentation-screenshot.png"></img>
-    </div>
-  </div>
-</section>
-
-<section class="lg:max-w-5xl p-4 mx-auto mt-12">
-  <div class="md:flex flex-row gap-4 flex-row-reverse">
-    <div class="md:basis-1/2">
-      <h2>Create Great Looking Applications</h2>
-      <h4>
-        Fully responsive server side rendered applications.
-      </h4>
-      <p>Pages rendered on the backend in Rust</p>
-      <p>Made responsive with the islands architecture</p>
-    </div>
-    <div class="md:basis-1/2">
-    <img alt="Cream" src="/landing-page/cloak-screenshot.png"></img>
-    </div>
-  </div>
-</section>
-
-<section class="lg:max-w-5xl p-4 mx-auto mt-12">
-  <div class="md:flex flex-row gap-4">
-    <div class="md:basis-1/2">
-      <h2>All documentation is generated from markdown files</h2>
-      <h4>
-        We walk you through best practices for scaling and operating products.
-      </h4>
-      <p>Deploying to Kubernetes</p>
-      <p>How to incorporate open telemetry (coming soon)</p>
-    </div>
-    <div class="md:basis-1/2">
-      <img class="" alt="Documentation" src="/landing-page/documentation-screenshot.png"></img>
-    </div>
-  </div>
-</section>
-
-<section class="lg:max-w-5xl p-4 mx-auto mt-12">
-  <h2>Features</h2>
-  <div class="md:flex flex-row gap-4">
-    <div class="md:basis-1/2">
-      <h4>Super fast page loads</h4>
-      <p>Most of our pages come in a just a few kb's</p>
-      <p>This means fast page loads and better SEO.</p>
-    </div>
-    <div class="md:basis-1/2">
-      <h4>Configurable</h4>
-      <p>All colours are configurable with CSS variables.</p>
-      <p>The landing pahe is HTML and can be built exactly how you want it.</p>
-    </div>
-  </div>
-</section>
+  {{ macros_features::quad_feature(
+    title='Deploy one of our models or integrate with any provider', 
+    sub_title='On Prem or managed models',
+    text='Some text',
+    title1='Open Source Quantized Models.',
+    text1='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    title2='Connect to Azure, Google, Amazon and more',
+    text2='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    title3="Secure Cloud.",
+    text3='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    title4="Public Cloud.",
+    text4='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.'
+  ) }}
+</div>
 
 {% if config.extra.footer_cta %}
 <section class="d-flex flex-content-center flex-column mt-8 mb-8 text-center pl-1 pr-1">
