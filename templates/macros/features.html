@@ -150,3 +150,23 @@ text4='')
   </div>
 </section>
 {% endmacro %}
+
+{% macro small_image_feature(
+title="",
+sub_title="",
+text="",
+image="")
+%}
+<section class="lg:max-w-5xl bg-white py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:text-center mb-6">
+      <h2 class="text-base font-semibold leading-7 text-indigo-600">{{title}}</h2>
+      <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{sub_title}}</p>
+      <p class="mt-6 text-lg leading-8 text-gray-600">{{text}}</p>
+    </div>
+    <img src="{{image}}" alt="Product screenshot"
+      class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+      width="2432" height="1442">
+  </div>
+</section>
+{% endmacro %}
