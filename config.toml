@@ -53,6 +53,7 @@ resources_2 = [
 
 menu_items = [
     {name = "Pricing", url = "/pricing"},
+    {name = "Contact", url = "/contact"},
     {name = "Blog", url = "/blog"},
 ]
 
