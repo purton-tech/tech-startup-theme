@@ -31,7 +31,7 @@
         @apply flex flex-row justify-between gap-12;
         > svg {
           fill: #555;
-          height: 40px;
+          height: 60px;
           width: auto;
         }
       }
