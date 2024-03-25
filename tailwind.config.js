@@ -13,11 +13,11 @@ module.exports = {
       {
         light: {
           ...require("daisyui/src/theming/themes")["light"],
-          "primary": "#3559c7",
+          /**"primary": "#3559c7",
           "secondary": "#f6d860",
           "accent": "#37cdbe",
           "neutral": "#3d4451",
-          "base-100": "#ffffff",
+          "base-100": "#ffffff",**/
 
           "--rounded-box": "5px", // border radius rounded-box utility class, used in card and other large boxes
           "--rounded-btn": "2px", // border radius rounded-btn utility class, used in buttons and similar element

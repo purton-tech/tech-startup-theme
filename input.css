@@ -37,3 +37,15 @@
       }
     }
 }
+
+pre {
+  position: relative;
+  overflow: auto;
+}
+
+pre button {
+  color: red;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}

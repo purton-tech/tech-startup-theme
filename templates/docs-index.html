@@ -30,6 +30,8 @@
     {% endblock extra_head %}
     
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <script async 
+      src="/copy-paste.js?h={{get_hash(path="copy-paste.js", sha_type=256)}}"></script>
 
     {% if config.extra.ga_analytics and config.extra.localhost and config.base_url != config.extra.localhost %}
     <!-- Google tag (gtag.js) -->

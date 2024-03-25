@@ -502,17 +502,17 @@ html {
   --su: 64.8% 0.150 160;
   --wa: 0.8471 0.199 83.87;
   --er: 0.7176 0.221 22.18;
-  --pc: 0.900587 0.035279 266.332512;
-  --ac: 0.153748 0.024689 184.972959;
+  --pc: 0.89824 0.06192 275.75;
+  --ac: 0.15352 0.0368 183.61;
   --inc: 0 0 0;
   --suc: 0 0 0;
   --wac: 0 0 0;
   --erc: 0 0 0;
-  --p: 0.502934 0.176396 266.332512;
-  --s: 0.884962 0.141836 95.291946;
+  --p: 0.4912 0.3096 275.75;
+  --s: 0.6971 0.329 342.55;
   --sc: 0.9871 0.0106 342.55;
-  --a: 0.768742 0.123447 184.972959;
-  --n: 0.385412 0.024038 262.829219;
+  --a: 0.7676 0.184 183.61;
+  --n: 0.321785 0.02476 255.701624;
   --nc: 0.894994 0.011585 252.096176;
   --b1: 1 0 0;
   --b2: 0.961151 0 0;
@@ -571,17 +571,17 @@ html {
   --su: 64.8% 0.150 160;
   --wa: 0.8471 0.199 83.87;
   --er: 0.7176 0.221 22.18;
-  --pc: 0.900587 0.035279 266.332512;
-  --ac: 0.153748 0.024689 184.972959;
+  --pc: 0.89824 0.06192 275.75;
+  --ac: 0.15352 0.0368 183.61;
   --inc: 0 0 0;
   --suc: 0 0 0;
   --wac: 0 0 0;
   --erc: 0 0 0;
-  --p: 0.502934 0.176396 266.332512;
-  --s: 0.884962 0.141836 95.291946;
+  --p: 0.4912 0.3096 275.75;
+  --s: 0.6971 0.329 342.55;
   --sc: 0.9871 0.0106 342.55;
-  --a: 0.768742 0.123447 184.972959;
-  --n: 0.385412 0.024038 262.829219;
+  --a: 0.7676 0.184 183.61;
+  --n: 0.321785 0.02476 255.701624;
   --nc: 0.894994 0.011585 252.096176;
   --b1: 1 0 0;
   --b2: 0.961151 0 0;
@@ -604,17 +604,17 @@ html {
   --su: 64.8% 0.150 160;
   --wa: 0.8471 0.199 83.87;
   --er: 0.7176 0.221 22.18;
-  --pc: 0.900587 0.035279 266.332512;
-  --ac: 0.153748 0.024689 184.972959;
+  --pc: 0.89824 0.06192 275.75;
+  --ac: 0.15352 0.0368 183.61;
   --inc: 0 0 0;
   --suc: 0 0 0;
   --wac: 0 0 0;
   --erc: 0 0 0;
-  --p: 0.502934 0.176396 266.332512;
-  --s: 0.884962 0.141836 95.291946;
+  --p: 0.4912 0.3096 275.75;
+  --s: 0.6971 0.329 342.55;
   --sc: 0.9871 0.0106 342.55;
-  --a: 0.768742 0.123447 184.972959;
-  --n: 0.385412 0.024038 262.829219;
+  --a: 0.7676 0.184 183.61;
+  --n: 0.321785 0.02476 255.701624;
   --nc: 0.894994 0.011585 252.096176;
   --b1: 1 0 0;
   --b2: 0.961151 0 0;
@@ -1409,6 +1409,69 @@ html {
   content: var(--tw-content);
 }
 
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--rounded-box, 1rem);
+}
+
+.card:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.card-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: var(--padding-card, 2rem);
+  gap: 0.5rem;
+}
+
+.card-body :where(p) {
+  flex-grow: 1;
+}
+
+.card figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card.image-full {
+  display: grid;
+}
+
+.card.image-full:before {
+  position: relative;
+  content: "";
+  z-index: 10;
+  border-radius: var(--rounded-box, 1rem);
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-n,oklch(var(--n)/var(--tw-bg-opacity)));
+  opacity: 0.75;
+}
+
+.card.image-full:before,
+    .card.image-full > * {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.card.image-full > figure img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card.image-full > .card-body {
+  position: relative;
+  z-index: 20;
+  --tw-text-opacity: 1;
+  color: var(--fallback-nc,oklch(var(--nc)/var(--tw-text-opacity)));
+}
+
 .checkbox {
   flex-shrink: 0;
   --chkbg: var(--fallback-bc,oklch(var(--bc)/1));
@@ -1891,6 +1954,59 @@ html {
   100% {
     transform: scale(1);
   }
+}
+
+.card :where(figure:first-child) {
+  overflow: hidden;
+  border-start-start-radius: inherit;
+  border-start-end-radius: inherit;
+  border-end-start-radius: unset;
+  border-end-end-radius: unset;
+}
+
+.card :where(figure:last-child) {
+  overflow: hidden;
+  border-start-start-radius: unset;
+  border-start-end-radius: unset;
+  border-end-start-radius: inherit;
+  border-end-end-radius: inherit;
+}
+
+.card:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.card.bordered {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-border-opacity)));
+}
+
+.card-bordered {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-border-opacity)));
+}
+
+.card.compact .card-body {
+  padding: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.card.image-full :where(figure) {
+  overflow: hidden;
+  border-radius: inherit;
 }
 
 .checkbox:focus {
@@ -2393,6 +2509,26 @@ html {
   padding: 0px;
 }
 
+.card-compact .card-body {
+  padding: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.card-compact .card-title {
+  margin-bottom: 0.25rem;
+}
+
+.card-normal .card-body {
+  padding: var(--padding-card, 2rem);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.card-normal .card-title {
+  margin-bottom: 0.75rem;
+}
+
 /** I need a Hero **/
 
 .hero {
@@ -2856,6 +2992,26 @@ html {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-accent {
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-a,oklch(var(--a)/var(--tw-bg-opacity)));
+}
+
+.bg-secondary {
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-s,oklch(var(--s)/var(--tw-bg-opacity)));
+}
+
+.bg-primary-content {
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-pc,oklch(var(--pc)/var(--tw-bg-opacity)));
+}
+
+.bg-accent-content {
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-ac,oklch(var(--ac)/var(--tw-bg-opacity)));
+}
+
 .fill-current {
   fill: currentColor;
 }
@@ -3102,6 +3258,18 @@ html {
 }
 
 @tailwind layout;
+
+pre {
+  position: relative;
+  overflow: auto;
+}
+
+pre button {
+  color: red;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
 
 @media (min-width: 1024px) {
   .lg\:prose-xl {
