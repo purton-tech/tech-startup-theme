@@ -20,6 +20,7 @@ highlight_themes_css = [
 
 [extra]
 copyright = "Copyright 2021 - "
+logo = "bionic-logo.svg"
 
 # Where shall we point the sign in and sign up buttons.
 authentication = { sign_up = "/blog", sign_in = "/blog" }
@@ -41,7 +42,7 @@ first_doc_page = "/docs/getting-started/introduction/"
 # Resources on the footer (LHS)
 resources_1 = [
     {name = "Blog", url = "/blog"},
-    {name = "Documentation", url = "/docs/getting-started/introduction"},
+    {name = "Documentation", url = "/docs/"},
     {name = "FAQ", url = "/blog"},
 ]
 
