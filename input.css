@@ -9,7 +9,7 @@
     .hero {
         @apply lg:max-w-5xl flex flex-col items-center text-center p-4;
         > .heading {
-          @apply mt-4 max-w-[36rem] text-4xl tracking-tight sm:text-4xl xl:max-w-[43.5rem]
+          @apply font-bold mt-4 max-w-[36rem] text-4xl tracking-tight sm:text-4xl xl:max-w-[43.5rem]
         }
         > .description {
           @apply mt-4 max-w-lg text-lg
@@ -31,21 +31,9 @@
         @apply flex flex-row justify-between gap-12;
         > svg {
           fill: #555;
-          height: 60px;
+          height: 40px;
           width: auto;
         }
       }
     }
-}
-
-pre {
-  position: relative;
-  overflow: auto;
-}
-
-pre button {
-  color: red;
-  position: absolute;
-  top: 5px;
-  right: 5px;
 }

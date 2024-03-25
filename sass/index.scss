@@ -9,6 +9,7 @@
 @use "content";
 @use "header";
 @use "site_header";
+@use "_copy_paste";
 
 @use "syntax_charcoal" as syntax;
 @include syntax.dark;

@@ -2762,6 +2762,9 @@ html {
     line-height: 2.5rem;
   }
   > .heading {
+    font-weight: 700;
+  }
+  > .heading {
     letter-spacing: -0.025em;
   }
   @media (min-width: 640px) {
@@ -2842,7 +2845,7 @@ html {
   > .logo-bar {
     > svg {
       fill: #555;
-      height: 60px;
+      height: 40px;
       width: auto;
     }
   }
@@ -3314,6 +3317,11 @@ html {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-neutral {
+  --tw-text-opacity: 1;
+  color: var(--fallback-n,oklch(var(--n)/var(--tw-text-opacity)));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -3341,18 +3349,6 @@ html {
 }
 
 @tailwind layout;
-
-pre {
-  position: relative;
-  overflow: auto;
-}
-
-pre button {
-  color: red;
-  position: absolute;
-  top: 5px;
-  right: 5px;
-}
 
 @media (min-width: 1024px) {
   .lg\:prose-xl {
