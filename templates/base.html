@@ -25,6 +25,9 @@
     src="/goat-counter.js?h={{get_hash(path="goat-counter.js", sha_type=256)}}"></script>
   {% endif %}
 
+  <script async 
+    src="/theme-switcher.js?h={{get_hash(path="theme-switcher.js", sha_type=256)}}"></script>
+
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
   {% if config.extra.ga_analytics and config.extra.localhost and config.base_url != config.extra.localhost %}

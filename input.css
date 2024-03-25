@@ -2,3 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind layout;
+
+@layer components {
+
+    /** I need a Hero **/
+    .hero {
+        @apply lg:max-w-5xl flex flex-col items-center text-center p-4;
+        > .heading {
+          @apply mt-4 max-w-[36rem] text-4xl tracking-tight sm:text-4xl xl:max-w-[43.5rem]
+        }
+        > .description {
+          @apply mt-4 max-w-lg text-lg
+        }
+        > .action {
+          @apply mt-4 flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4
+        }
+    }
+
+    /** Logo Suite **/
+    .logo-suite {
+      > .heading {
+  
+      }
+      > .description {
+        
+      }
+      > .logo-bar {
+        @apply flex flex-row justify-between gap-12;
+        > svg {
+          fill: #555;
+          height: 40px;
+          width: auto;
+        }
+      }
+    }
+}
