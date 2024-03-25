@@ -1,5 +1,13 @@
+if (document.readyState !== 'loading') {
+    console.log('document is already ready, just execute code here');
+    initThemeSwitcher();
+} else {
+    document.addEventListener("DOMContentLoaded", function () {
+        initThemeSwitcher()
+    })
+}
 
-document.addEventListener("DOMContentLoaded", function () {
+function initThemeSwitcher () {
     console.log("Added theme switcher")
     const localStorageTheme = localStorage.getItem("theme");
     const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
@@ -33,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("theme", theme);
         
     });
-})
+}
 
 function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
     if (localStorageTheme !== null) {

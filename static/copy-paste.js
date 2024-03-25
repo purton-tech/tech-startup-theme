@@ -1,5 +1,14 @@
+if (document.readyState !== 'loading') {
+    console.log('document is already ready, just execute code here');
+    initCopyPaste();
+} else {
+    document.addEventListener("DOMContentLoaded", function () {
+        initCopyPaste()
+    })
+}
 
-document.addEventListener("DOMContentLoaded", function () {
+function initCopyPaste() {
+
     const copyButtonLabel = "Copy Code";
 
     // use a class selector if available
@@ -8,30 +17,30 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(blocks)
 
     blocks.forEach((block) => {
-    // only add button if browser supports Clipboard API
-    if (navigator.clipboard) {
-        let button = document.createElement("button");
+        // only add button if browser supports Clipboard API
+        if (navigator.clipboard) {
+            let button = document.createElement("button");
 
-        button.innerText = copyButtonLabel;
-        block.appendChild(button);
+            button.innerText = copyButtonLabel;
+            block.appendChild(button);
 
-        button.addEventListener("click", async () => {
-        await copyCode(block, button);
-        });
-    }
+            button.addEventListener("click", async () => {
+                await copyCode(block, button);
+            });
+        }
     });
 
     async function copyCode(block, button) {
-    let code = block.querySelector("code");
-    let text = code.innerText;
+        let code = block.querySelector("code");
+        let text = code.innerText;
 
-    await navigator.clipboard.writeText(text);
+        await navigator.clipboard.writeText(text);
 
-    // visual feedback that task is completed
-    button.innerText = "Code Copied";
+        // visual feedback that task is completed
+        button.innerText = "Code Copied";
 
-    setTimeout(() => {
-        button.innerText = copyButtonLabel;
-    }, 700);
+        setTimeout(() => {
+            button.innerText = copyButtonLabel;
+        }, 700);
     }
-})
+}
