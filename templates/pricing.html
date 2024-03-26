@@ -4,46 +4,143 @@
 {% extends "base.html" %}
 
 {% block seo %}
-  {{ super() }}
+{{ super() }}
 
-  {% set title = 'The pricing page' %}
-  {% set description = 'Show how much we charge' %}
-  
-  {{ macros_head::seo(
-    title=title, 
-    description=description
-  ) }}
+{% set title = 'The pricing page' %}
+{% set description = 'Show how much we charge' %}
+
+{{ macros_head::seo(
+title=title,
+description=description
+) }}
 {% endblock seo %}
 
 {% block content %}
 
-<div class="flex flex-col items-center">
 
-  {{ macros_pricing::pricing_hero(
-    title='Simple no-tricks pricing', 
-    sub_title="Do it yourself or let us help, it's your choice."
-  ) }}
+<div>
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl sm:text-center">
+      <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Pricing</h2>
+      <p class="mt-6 text-lg leading-8">Title</p>
+    </div>
+  </div>
+</div>
 
-  {{ macros_pricing::pricing_item(
-    title='Self Managed', 
-    sub_title1="Do it yourself or let us help, it's your choice.",
-    sub_title2="Pay once, own it forever",
-    sub_title3="Invoices and receipts available for easy company reimbursement"
-  ) }}
+<div class="mx-auto lg:flex lg:flex-row justify-center gap-4 lg:max-w-5xl w-full p-5">
+  <div class="card card-bordered lg:w-1/3">
+    <div class="card-body flex flex-col justify-between list-tick">
+      <div class="flex flex-col gap-3">
+        <h3 class="card-title">Community Edition</h3>
+        <span class="badge badge-primary badge-outline">Open Source</span>
+        <p>Ideal for evaluating Bionic and testing RAG use cases.</p>
+        <h4 class="font-extrabold">Generative AI</h4>
+        <ul>
+          <li>Code and Text Generation</li>
+          <li>Role based access control</li>
+          <li>Chat History</li>
+        </ul>
+        <h4 class="font-extrabold">No Code RAG Pipelines</h4>
+        <ul>
+          <li>All major document formats processed.</li>
+          <li>Automated chunking and vector generation.</li>
+          <li>5 GB of storage.</li>
+        </ul>
+        <h4 class="font-extrabold">Open AI Compatible API</h4>
+        <ul>
+          <li>Track and monitor API usage.</li>
+          <li>Share models between projects.</li>
+          <li>Key creation and revocation.</li>
+        </ul>
+        <h4 class="font-extrabold">Teams</h4>
+        <ul>
+          <li>Share RAG pipelines with collegues.</li>
+        </ul>
+      </div>
+      <div class="mt-5 flex flex-col gap-2">
+        <hr />
+        <h3 class="font-extrabold">Free</h3>
 
-  {{ macros_pricing::pricing_item(
-    title='Support Contract', 
-    sub_title1="Do it yourself or let us help, it's your choice.",
-    sub_title2="Pay once, own it forever",
-    sub_title3="Invoices and receipts available for easy company reimbursement"
-  ) }}
+        <a href="/docs" class="btn btn-secondary btn-outline">
+          Get Started
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="card card-bordered lg:w-1/3">
+    <div class="card-body flex flex-col justify-between list-tick">
+      <div class="flex flex-col gap-3">
+        <h3 class="card-title">Edge Edition</h3>
+        <span class="badge badge-primary badge-outline">Best for small teams</span>
+        <p>Ideal for bringing AI close to the data for small teams</p>
+        <h4 class="font-extrabold">Everything from Community Edition and...</h4>
+        <ul>
+          <li>Support for running on bare metal.</li>
+          <li>Continuous batching.</li>
+          <li>100 GB of storage.</li>
+        </ul>
+        <h4 class="font-extrabold">Document Pipelines</h4>
+        <ul>
+          <li>Batch or stream document processing.</li>
+          <li>100s of sources.</li>
+        </ul>
+        <h4 class="font-extrabold">Hardware Setup</h4>
+        <ul>
+          <li>Hardware recommendations.</li>
+          <li>Possibility of custom builds.</li>
+        </ul>
+      </div>
+      <div class="mt-5 flex flex-col gap-2">
+        <hr />
+        <h3 class="font-extrabold">$1249 / month</h3>
 
-  {{ macros_pricing::pricing_item(
-    title='Consulting', 
-    sub_title1="Do it yourself or let us help, it's your choice.",
-    sub_title2="Pay once, own it forever",
-    sub_title3="Invoices and receipts available for easy company reimbursement"
-  ) }}
+        <a href="/docs" class="btn btn-secondary btn-outline">
+          Book a Call
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="card card-bordered lg:w-1/3">
+    <div class="card-body flex flex-col justify-between list-tick">
+      <div class="flex flex-col gap-3">
+        <h3 class="card-title">Enterprise Edition</h3>
+        <span class="badge badge-primary badge-outline">Enterprise Edition</span>
+        <p>Deploy across the whole enterprise</p>
+        <h4 class="font-extrabold">Everything from Edge Edition and...</h4>
+        <ul>
+          <li>Dedicated customer success and engineering resources.</li>
+          <li>Custom Integrations.</li>
+          <li>Custom SLAs and support.</li>
+        </ul>
+        <h4 class="font-extrabold">Data Governance</h4>
+        <ul>
+          <li>National and regional deployments.</li>
+          <li>Data Guardrails.</li>
+          <li>Full team data seperation.</li>
+          <li>Compliant with data export controls.</li>
+        </ul>
+        <h4 class="font-extrabold">Security</h4>
+        <ul>
+          <li>Single Sign On.</li>
+        </ul>
+        <h4 class="font-extrabold">Resources</h4>
+        <ul>
+          <li>Unlimited storage.</li>
+          <li>Unlimited users.</li>
+          <li>Unlimited teams.</li>
+        </ul>
+      </div>
+
+      <div class="mt-5 flex flex-col gap-2">
+        <hr />
+        <h3 class="font-extrabold">Custom Pricing</h3>
+
+        <a href="/docs" class="btn btn-secondary btn-outline">
+          Book a Call
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 
 
