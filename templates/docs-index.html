@@ -63,7 +63,7 @@
                             {% set subsection = get_section(path=s) %}
                             <li {% if current_path == subsection.path %}class="active"{% endif %}>
                                 {% set chapter_num = loop.index %}
-                                <span class="section-title">{{ subsection.title }}</span>
+                                <h4 class="section-title">{{ subsection.title }}</h4>
                                 {% if subsection.pages %}
                                     <ul>
                                         {% for page in subsection.pages %}
